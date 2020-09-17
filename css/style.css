@@ -1,0 +1,15 @@
+*,
+::after,
+::before{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.Roboto{
+  font-family: 'Roboto Slab', serif;
+}
+
+.Gilroy{
+  font-family: 'Gilroy', sans-serif;
+}
