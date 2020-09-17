@@ -216,6 +216,8 @@ body{
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
   height: 0;
+  top: 50%;
+  transform: translateY(-53%);
 }
 
 .callToAction__right__video{
