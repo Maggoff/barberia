@@ -23,13 +23,23 @@ $(document).ready(function () {
   let onPause = false;
 
   $('.callToAction__right__video').on('click', function () {
-    if(onPause===false){
+    if (onPause === false) {
       document.getElementsByTagName("video")[0].pause();
       onPause = true;
-    }else{
+    } else {
       document.getElementsByTagName("video")[0].play();
       onPause = false;
     }
   });
+
+  let id = document.getElementsByClassName("services__menu__item");
+  let img = document.getElementById("services__info__img");
+  let txt = document.getElementById("services__info__text");
+  for (let i = 0; i < id.length; i++) {
+    id[i].onmouseover = function (e) {
+      img.src = id[i].getAttribute("data-img");
+      txt.innerHTML = id[i].getAttribute("data-text");
+    }
+  }
 
 });
