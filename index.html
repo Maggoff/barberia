@@ -7,6 +7,7 @@
   <title>Barberia</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fullpage.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -40,62 +41,78 @@
     </div>
   </header>
 
-  <section class="main">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="main__container">
-            <div class="main__container__title">
-              Просто берём и
-            </div>
-            <div class="main__slides__fraim">
-              <ul class="main__slides">
-                <li class="main__slide main__container__text">Делаем так, как тебе нравится</li>
-                <li class="main__slide main__container__text">Улучшаем твою прическу</li>
-                <li class="main__slide main__container__text">Наливаем тебе хороший напиток</li>
-                <li class="main__slide main__container__text">Разрабатываем лучший сайт</li>
-              </ul>
+  <section class="fullpage" id="fullpage">
+    <div class="verticalPage fp-auto-height">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="main">
+              <div class="main__title">
+                Просто берём и
+              </div>
+              <div class="main__slides__fraim">
+                <ul class="main__slides">
+                  <li class="main__slide main__text">Делаем так, как тебе нравится</li>
+                  <li class="main__slide main__text">Улучшаем твою прическу</li>
+                  <li class="main__slide main__text">Наливаем тебе хороший напиток</li>
+                  <li class="main__slide main__text">Разрабатываем лучший сайт</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <section class="callToAction">
-    <div class="container-fluid">
-      <div class="callToAction__container">
-        <div class="callToAction__left">
-          <div class="callToAction__left__title">
-            Barberia - не просто барбершоп
+    <div class="verticalPage">
+      <div class="container-fluid">
+        <div class="callToAction">
+          <div class="callToAction__left">
+            <div class="callToAction__left__box">
+              <div class="callToAction__left__title">
+                Barberia - не просто барбершоп
+              </div>
+              <div class="callToAction__left__text">
+                Barberia - это когда тебе не хочется
+                быть в другом месте
+              </div>
+              <div class="callToAction__left__text">
+                Да и зачем, если у нас есть твой любимый мастер, любимая причёска и любимый напиток
+              </div>
+              <a href="#" class="callToAction__left__btn">
+                Проверить лично
+                <i class="fas fa-long-arrow-alt-right"></i>
+              </a>
+            </div>
           </div>
-          <div class="callToAction__left__text">
-            Barberia - это когда тебе не хочется
-            быть в другом месте
-          </div>
-          <div class="callToAction__left__text">
-            Да и зачем, если у нас есть твой любимый мастер, любимая причёска и любимый напиток
-          </div>
-          <a href="#" class="callToAction__left__btn">
-            Проверить лично
-            <i class="fas fa-long-arrow-alt-right"></i>
-          </a>
-        </div>
-        <div class="callToAction__right">
-          <div class="callToAction__right__box">
-            <iframe width="560" height="315" class="callToAction__right__video"
-              src="https://www.youtube.com/embed/hwngH4k8ZcE?autoplay=1&autohide=2&border=0&enablejsapi=1&rel=0&controls=0&showinfo=0&mute=1&loop=1&playlist=hwngH4k8ZcE&modestbranding=1"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+          <div class="callToAction__right">
+            <div class="callToAction__right__box">
+              <iframe class="callToAction__right__video"
+                src="https://www.youtube.com/embed/hwngH4k8ZcE?autoplay=1&autohide=2&border=0&enablejsapi=1&rel=0&controls=0&showinfo=0&mute=1&loop=1&playlist=hwngH4k8ZcE&modestbranding=1"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+
   </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
   <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/fullpage.js"></script>
+  <script>
+    new fullpage('#fullpage', {
+      anchors: ['firstPage', 'secondPage'],
+      autoScrolling: true,
+      verticalCentered: false,
+      sectionSelector: '.verticalPage',
+      slideSelector: '.horizontalPage',
+    });
+  </script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>
 
