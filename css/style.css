@@ -360,7 +360,8 @@ body{
   margin-top: 60px;
 	padding: 20px 40px;
 	background-color: #000000;
-	border: 1px solid #000000;
+  border: 1px solid #000000;
+  text-transform: uppercase;
 	transition: 0.4s;
 }
 
@@ -368,6 +369,17 @@ body{
 	color: #000000;
 	background-color: #ffffff;
 	text-decoration: none;
+}
+
+.bar__info__text{
+  margin-top: 44px;
+  font-family: 'Gilroy', sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  width: 80%;
+  text-align: left;
+  color: #999999;
 }
 
 .haircuts__btn{
@@ -544,6 +556,7 @@ body{
   left: 50%;
   transform: translateX(-50%);
   bottom: -12%;
+  transition: 0.4s;
 }
 
 .training__box__btn:hover{
@@ -556,6 +569,92 @@ body{
   font-size: 36px;
   line-height: 21px;
   margin-left: 24px;
+}
+
+.footer__box{
+  text-align: center;
+}
+
+.footer__img{
+  margin-top: 5vh;
+}
+
+#map{
+  height: 300px;
+  width: 100%;
+  margin-top: 96px;
+}
+
+.container-fluid.footer{
+  height: auto;
+}
+
+.social{
+  background-color: #ffffff;
+}
+
+.footer__social,
+.footer__address,
+.footer__contacts{
+  display: flex;
+  flex-direction: column;
+  padding: 28px 0;
+}
+
+.footer__social__text,
+.footer__address__work,
+.footer__contacts__text{
+  margin: 8px 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: lowercase;
+  color: #000000;
+}
+
+.footer__social__text:hover,
+.footer__address__work:hover,
+.footer__contacts__text:hover{
+  color: #000000;
+  text-decoration: none;
+}
+
+.footer__address__work{
+  text-align: center;
+}
+
+.footer__address__text{
+  margin: 8px 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: underline;
+  color: #000000;
+}
+
+.footer__contacts__text{
+  text-align: right;
+}
+
+.footer__credits{
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.footer__credits__text{
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #878787;
+}
+
+a.footer__credits__text:hover{
+  color: #878787;
 }
 
 @media(max-width: 1200px){
