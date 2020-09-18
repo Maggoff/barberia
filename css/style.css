@@ -620,6 +620,21 @@ body{
   text-decoration: none;
 }
 
+a.footer__social__text,
+a.footer__contacts__text{
+  border-bottom: 1px solid transparent;
+  transition: 0.4s;
+}
+
+a.footer__social__text:hover,
+a.footer__contacts__text:hover{
+  border-bottom: 1px solid #000000;
+}
+
+.footer__box__left{
+  text-align: left;
+}
+
 .footer__address__work{
   text-align: center;
 }
@@ -633,6 +648,10 @@ body{
   text-align: center;
   text-decoration: underline;
   color: #000000;
+}
+
+.footer__box__right{
+  text-align: right;
 }
 
 .footer__contacts__text{
@@ -651,10 +670,14 @@ body{
   line-height: 21px;
   font-weight: 400;
   color: #878787;
+  border-bottom: 1px solid transparent;
+  transition: 0.4s;
 }
 
 a.footer__credits__text:hover{
   color: #878787;
+  text-decoration: none;
+  border-bottom: 1px solid #878787;
 }
 
 @media(max-width: 1200px){
