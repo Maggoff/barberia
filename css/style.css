@@ -5,10 +5,8 @@ a{
 button:focus{
   outline: none;
 }
-
-.container,
-.container-fluid{
-  height: 100%;
+figure{
+  margin: 0;
 }
 
 body{
@@ -537,6 +535,11 @@ body{
   width: 60%;
   border: 16px solid #ffffff;
   background-color: #f8f8f8;
+  
+}
+
+#totalLook__container{
+  
 }
 
 .totalLook__right{
