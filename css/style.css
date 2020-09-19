@@ -538,8 +538,8 @@ body{
   
 }
 
-#totalLook__container{
-  
+#totalLook__container img{
+  width: 100%;
 }
 
 .totalLook__right{
