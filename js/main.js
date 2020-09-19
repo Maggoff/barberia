@@ -1,5 +1,12 @@
 $(document).ready(function () {
 
+  $("#menu, #logo").on("click", "a", function (event) {
+    event.preventDefault();
+    var id = $(this).attr('href'),
+      top = $(id).offset().top;
+    $('body,html').animate({ scrollTop: top }, 600);
+  });
+
   let vsOpts = {
     $slides: $('.main__slide'),
     $list: $('.main__slides'),
@@ -53,7 +60,7 @@ $(document).ready(function () {
     // }
   }
 
-  let idBar = document.getElementsByClassName("bar");
+  let idBar = document.getElementsByClassName("bar__menu__item");
   let imgBar = document.getElementById("bar__info__img");
   let txtBar = document.getElementById("bar__info__text");
   let oldIBar = 100;
@@ -61,14 +68,37 @@ $(document).ready(function () {
     idBar[i].onmouseover = function (e) {
       if (oldIBar != i) {
         oldIBar = i;
-        $('.services__info__img, .services__info__text').stop(true, true).animate({ opacity: 0 }, 800, function () {
+        $('.bar__info__img, .bar__info__text').stop(true, true).animate({ opacity: 0 }, 800, function () {
           imgBar.src = idBar[i].getAttribute("data-img");
           txtBar.innerHTML = idBar[i].getAttribute("data-text");
         });
-        $('.services__info__img, .services__info__text').stop(true, true).animate({ opacity: 1 }, 800,);
+        $('.bar__info__img, .bar__info__text').stop(true, true).animate({ opacity: 1 }, 800,);
       }
     }
   }
+
+  $('.team__slider').slick({
+    centerMode: true,
+    centerPadding: '0px',
+    slidesToShow: 1,
+    prevArrow: '<button type="button" class="slickPrev"></button>',
+    nextArrow: '<button type="button" class="slickNext"></button>',
+    focusOnSelect: true,
+    swipe: false,
+    // responsive: [
+    //   {
+    //     breakpoint: 1030,
+    //     settings: {
+    //       arrows: false,
+    //       centerMode: true,
+    //       dots: true,
+    //       centerPadding: '0px',
+    //       slidesToShow: 3,
+    //       slidesToScroll: 3,
+    //     }
+    //   }
+    // ]
+  });
 
   let idHaircut = document.getElementsByClassName("haircut");
   let imgHaircut = document.getElementById("haircuts__info__img");

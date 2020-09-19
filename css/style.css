@@ -2,6 +2,10 @@ a{
   display: inline-block;
 }
 
+button:focus{
+  outline: none;
+}
+
 .container,
 .container-fluid{
   height: 100%;
@@ -18,7 +22,7 @@ body{
   padding: 36px 0;
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(36px);
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 2;
 }
@@ -85,12 +89,12 @@ body{
   padding-top: 100px;
 }
 
-.main{
+.main__box{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 15vh 0;
+  margin: 35vh 0 30vh;
 }
 
 .main__title{
@@ -145,9 +149,8 @@ body{
   color: #000000;
 }
 
-.callToAction{
+.callToAction__box{
   display: flex;
-  height: 100%;
 }
 
 .callToAction__left{
@@ -155,13 +158,6 @@ body{
   background-color: #ffffff;
   border: 16px solid #f8f8f8;
   padding: 6% 5%;
-  position: relative;
-}
-
-.callToAction__left__box{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .callToAction__left__title{
@@ -222,7 +218,7 @@ body{
   padding-bottom: 56.25%; /* 16:9 */
   height: 0;
   top: 50%;
-  transform: translateY(-54.5%);
+  transform: translateY(-53.3%);
 }
 
 .callToAction__right__video{
@@ -233,62 +229,75 @@ body{
   height: 100%;
 }
 
-.services{
-  height: 80%;
+.services,
+.bar,
+.haircuts{
+  padding-top: 120px;
 }
 
-.services__title{
+.services__title,
+.bar__title,
+.haircuts__title{
   font-family: 'Roboto Slab', serif;
   font-size: 36px;
   line-height: 47px;
   font-weight: 700;
   text-align: center;
-  margin-top: 5vh;
-  margin-bottom: 40px;
+  margin-bottom: 90px;
   color: #000000;
 }
 
-.col-lg-4{
-  position: relative;
-}
-
-.services__info{
+.services__info,
+.bar__info,
+.haircuts__info{
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
-.services__info__img{
-  width: 80%;
+.services__info__img,
+.bar__info__img,
+.haircuts__info__img{
+  width: 100%;
 }
 
-.services__info__text{
+.services__info__text,
+.bar__info__text,
+.haircuts__info__text{
   margin-top: 44px;
   font-family: 'Gilroy', sans-serif;
   font-size: 20px;
   line-height: 30px;
   font-weight: 400;
-  width: 80%;
+  width: 100%;
   text-align: right;
   color: #999999;
 }
 
-.services__menu{
-  position: absolute;
-  width: 95%;
-  top: 50%;
-  transform: translateY(-50%);
+.bar__info__text,
+.haircuts__info__text{
+  text-align: left;
 }
 
-.services__menu__items{
+.services__menu,
+.bar__menu,
+.haircuts__menu{
+  width: 100%;
+  height: 100%;
   list-style: none;
   padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.services__menu__item{
+.services__menu__item,
+.bar__menu__item,
+.haircuts__menu__item{
   display: flex;
   align-items: center;
   width: 100%;
@@ -300,24 +309,32 @@ body{
   transition: 0.4s;
 }
 
-.services__menu__box{
+.services__menu__box,
+.bar__menu__box,
+.haircuts__menu__box{
   display: flex;
   align-items: center;
   width: 90%;
   overflow: hidden;
 }
 
-.services__menu__item:hover{
+.services__menu__item:hover,
+.bar__menu__item:hover,
+.haircuts__menu__item:hover{
   cursor: pointer;
 	color: #000000;
 }
 
-.services__menu__text{
+.services__menu__text,
+.bar__menu__text,
+.haircuts__menu__text{
   position: relative;
-  padding-right: 25px;
+  padding-right: 1vw;
 }
 
-.services__menu__text::after{
+.services__menu__text::after,
+.bar__menu__text::after,
+.haircuts__menu__text::after{
   position: absolute;
   content: '';
   right: -1000%;
@@ -328,36 +345,45 @@ body{
   transition: 0.4s;
 }
 
-.services__menu__item:hover .services__menu__text::after{
+.services__menu__item:hover .services__menu__text::after,
+.bar__menu__item:hover .bar__menu__text::after,
+.haircuts__menu__item:hover .haircuts__menu__text::after{
 	background-color: #1c1c1f;
 }
 
-.services__menu__price{
+.services__menu__price,
+.bar__menu__price,
+.haircuts__menu__price{
   width: 10%;
   display: inline-block;
   text-align: right;
 }
 
-.services__menu__line{
+.services__menu__line,
+.bar__menu__line,
+.haircuts__menu__line{
   width: 0px;
   height: 1px;
 	background-color: transparent;
 	transition: 0.4s;
 }
 
-.services__menu__item:hover .services__menu__line{
-  width: 25px;
+.services__menu__item:hover .services__menu__line,
+.bar__menu__item:hover .bar__menu__line,
+.haircuts__menu__item:hover .haircuts__menu__line{
+  width: 1vw;
 	background-color: #1c1c1f;
-	margin-right: 20px;
+	margin-right: 1vw;
 }
 
-.services__menu__btn{
+.services__menu__btn,
+.haircuts__menu__btn{
   font-family: 'Roboto Slab', serif;
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
   color: #ffffff;
-  margin-top: 60px;
+  margin-top: 44px;
 	padding: 20px 40px;
 	background-color: #000000;
   border: 1px solid #000000;
@@ -365,25 +391,19 @@ body{
 	transition: 0.4s;
 }
 
-.services__menu__btn:hover{
+.haircuts__menu__btn{
+  margin-left: 69%;
+}
+
+.services__menu__btn:hover,
+.haircuts__menu__btn:hover{
 	color: #000000;
 	background-color: #ffffff;
 	text-decoration: none;
 }
 
-.bar__info__text{
-  margin-top: 44px;
-  font-family: 'Gilroy', sans-serif;
-  font-size: 20px;
-  line-height: 30px;
-  font-weight: 400;
-  width: 80%;
-  text-align: left;
-  color: #999999;
-}
-
-.haircuts__btn{
-  margin-left: 71.25%;
+.team{
+  padding-top: 120px;
 }
 
 .team__title{
@@ -393,8 +413,7 @@ body{
   font-weight: 700;
   text-align: center;
   color: #000000;
-  margin-top: 5vh;
-  margin-bottom: 20px;
+  margin-bottom: 36px;
 }
 
 .team__text{
@@ -404,12 +423,18 @@ body{
   font-weight: 400;
   text-align: center;
   color: #000000;
-  margin-bottom: 40px;
+  margin-bottom: 90px;
 }
 
-.fp-controlArrow.fp-prev{
-  left: -8.6%;
-  top: 7%;
+.team__slider{
+  position: relative;
+  display: flex;
+}
+
+.slickPrev{
+  position: absolute;
+  left: -10%;
+  top: 0;
   border: 16px solid #f8f8f8;
   background-color: #ffffff;
   background-image: url(../img/prev.svg);
@@ -419,9 +444,9 @@ body{
   width: 10%;
 }
 
-.fp-controlArrow.fp-next{
-  right: -8.6%;
-  top: 7%;
+.slickNext{
+  position: absolute;
+  right: -10%;
   border: 16px solid #f8f8f8;
   background-color: #ffffff;
   background-image: url(../img/next.svg);
@@ -431,9 +456,8 @@ body{
   width: 10%;
 }
 
-.team__item{
+.team__box{
   display: flex;
-  height: 50%;
 }
 
 .team__item__img{
@@ -488,6 +512,11 @@ body{
   text-decoration: none;
 }
 
+.training{
+  padding-top: 120px;
+  padding-bottom: 90px;
+}
+
 .training__title{
   font-family: 'Roboto Slab', serif;
   font-size: 48px;
@@ -495,8 +524,7 @@ body{
   font-weight: 700;
   text-align: center;
   color: #000000;
-  margin-top: 5vh;
-  margin-bottom: 20px;
+  margin-bottom: 36px;
 }
 
 .training__text{
@@ -506,21 +534,21 @@ body{
   font-weight: 400;
   text-align: center;
   color: #000000;
-  margin-bottom: 40px;
+  margin-bottom: 90px;
 }
 
 .training__img{
   width: 100%;
 }
 
-.training__box{
+.training__item{
   background-color: #ffffff;
   width: 100%;
   padding: 40px 70px 70px;
   position: relative;
 }
 
-.training__box__title{
+.training__item__title{
   font-family: 'Roboto Slab', serif;
   font-size: 24px;
   line-height: 32px;
@@ -529,7 +557,7 @@ body{
   color: #000000;
 }
 
-.training__box__text{
+.training__item__text{
   font-family: 'Gilroy', sans-serif;
   font-size: 20px;
   line-height: 30px;
@@ -539,7 +567,7 @@ body{
   margin-top: 36px;
 }
 
-.training__box__btn{
+.training__item__btn{
   position: absolute;
   font-family: 'Roboto Slab', serif;
   font-size: 16px;
@@ -557,32 +585,34 @@ body{
   transform: translateX(-50%);
   bottom: -12%;
   transition: 0.4s;
+  z-index: 1;
 }
 
-.training__box__btn:hover{
+.training__item__btn:hover{
   color: #000000;
   background-color: #ffffff;
   text-decoration: none;
 }
 
-.training__box__btn i{
+.training__item__btn i{
   font-size: 36px;
   line-height: 21px;
   margin-left: 24px;
 }
 
-.footer__box{
+.training__box{
   text-align: center;
 }
 
-.footer__img{
-  margin-top: 5vh;
+.training__logo{
+  margin-top: 150px;
 }
+
+
 
 #map{
   height: 300px;
   width: 100%;
-  margin-top: 96px;
 }
 
 .container-fluid.footer{
@@ -680,6 +710,22 @@ a.footer__credits__text:hover{
   border-bottom: 1px solid #878787;
 }
 
+@media(max-width: 1400px){
+
+  .services__menu__box,
+  .bar__menu__box,
+  .haircuts__menu__box{
+    width: 87%;
+  }
+
+  .services__menu__price,
+  .bar__menu__price,
+  .haircuts__menu__price{
+    width: 13%;
+  }
+
+}
+
 @media(max-width: 1200px){
 
   .main__text{
@@ -701,6 +747,17 @@ a.footer__credits__text:hover{
     font-size: 14px;
     line-height: 18px;
     padding: 15px 30px;
+  }
+
+  .services__menu__item,
+.bar__menu__item,
+.haircuts__menu__item{
+  font-size: 16px;
+  line-height: 24px;
+}
+
+  .team__item__info{
+    padding: 0 5vh;
   }
 
 }
