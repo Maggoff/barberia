@@ -100,7 +100,7 @@ $(document).ready(function () {
     // ]
   });
 
-  let idHaircut = document.getElementsByClassName("haircut");
+  let idHaircut = document.getElementsByClassName("haircuts__menu__item");
   let imgHaircut = document.getElementById("haircuts__info__img");
   let txtHaircut = document.getElementById("haircuts__info__text");
   let oldIHaircut = 100;
@@ -108,11 +108,11 @@ $(document).ready(function () {
     idHaircut[i].onmouseover = function (e) {
       if (oldIHaircut != i) {
         oldIHaircut = i;
-        $('.services__info__img, .services__info__text').stop(true, true).animate({ opacity: 0 }, 800, function () {
+        $('.haircuts__info__img, .haircuts__info__text').stop(true, true).animate({ opacity: 0 }, 800, function () {
           imgHaircut.src = idHaircut[i].getAttribute("data-img");
           txtHaircut.innerHTML = idHaircut[i].getAttribute("data-text");
         });
-        $('.services__info__img, .services__info__text').stop(true, true).animate({ opacity: 1 }, 800,);
+        $('.haircuts__info__img, .haircuts__info__text').stop(true, true).animate({ opacity: 1 }, 800,);
       }
     }
   }
