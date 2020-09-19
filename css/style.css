@@ -1,3 +1,7 @@
+*{
+  outline: none;
+}
+
 a{
   display: inline-block;
 }
@@ -438,7 +442,7 @@ body{
   background-image: url(../img/prev.svg);
   background-repeat: no-repeat;
   background-position: center;
-  height: 100%;
+  height: 98.9%;
   width: 10%;
 }
 
@@ -450,7 +454,7 @@ body{
   background-image: url(../img/next.svg);
   background-repeat: no-repeat;
   background-position: center;
-  height: 100%;
+  height: 98.9%;
   width: 10%;
 }
 
@@ -459,8 +463,10 @@ body{
 }
 
 .team__item__img{
+  display: block;
   width: 50%;
   border: 16px solid #ffffff;
+  margin: 0;
 }
 
 .team__item__info{
@@ -508,6 +514,20 @@ body{
   background-color: #ffffff;
   color: #000000;
   text-decoration: none;
+}
+
+.team__galery{
+  display: flex;
+}
+
+.team__galery__foto{
+  width: 20%;
+  transition: 0.4s;
+  border: 16px solid #ffffff;
+}
+
+.team__galery__foto:hover{
+  border: 0px solid #ffffff;
 }
 
 .totalLook{
@@ -778,6 +798,10 @@ a.footer__credits__text:hover{
 
 @media(max-width: 1400px){
 
+  .header__menu__item{
+    margin-left: 4%;
+  }
+
   .services__menu__box,
   .bar__menu__box,
   .haircuts__menu__box{
@@ -793,6 +817,10 @@ a.footer__credits__text:hover{
 }
 
 @media(max-width: 1200px){
+
+  .header__menu__item{
+    margin-left: 2%;
+  }
 
   .main__text{
     font-size: 58px;
@@ -816,11 +844,11 @@ a.footer__credits__text:hover{
   }
 
   .services__menu__item,
-.bar__menu__item,
-.haircuts__menu__item{
-  font-size: 16px;
-  line-height: 24px;
-}
+  .bar__menu__item,
+  .haircuts__menu__item{
+    font-size: 16px;
+    line-height: 24px;
+  }
 
   .team__item__info{
     padding: 0 5vh;

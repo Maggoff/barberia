@@ -84,7 +84,7 @@ $(document).ready(function () {
     prevArrow: '<button type="button" class="slickPrev"></button>',
     nextArrow: '<button type="button" class="slickNext"></button>',
     focusOnSelect: true,
-    swipe: false,
+    swipe: true,
     // responsive: [
     //   {
     //     breakpoint: 1030,
