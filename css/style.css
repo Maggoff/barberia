@@ -659,7 +659,11 @@ body{
 }
 
 .team__galery__foto{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 20%;
+  height: 150px;
   transition: 0.4s;
   border: 16px solid #ffffff;
 }
@@ -922,6 +926,10 @@ a.footer__credits__text:hover{
 
   .team__item__info{
     padding: 0 5vh;
+  }
+
+  .team__galery__foto{
+    height: 110px;
   }
 
 }
@@ -1300,6 +1308,7 @@ a.footer__credits__text:hover{
   }
 
   .team__galery__foto{
+    height: 80px;
     border: 8px solid #ffffff;
   }
 
@@ -1475,6 +1484,10 @@ a.footer__credits__text:hover{
     padding: 0 10%;
   }
 
+  .team__galery__foto{
+    height: 60px;
+  }
+
 }
 
 @media(max-width: 575px){
@@ -1490,10 +1503,10 @@ a.footer__credits__text:hover{
   .main__text{
     font-size: 34px;
   }
-    
-  /* .main__slides__fraim{
-    height: 168px;
-  } */
+
+  .team__galery__foto{
+    height: 40px;
+  }
 
 }
 

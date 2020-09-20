@@ -43,10 +43,10 @@ $(document).ready(function () {
 
   let width = screen.width;
   let heightOpts;
-  if(width >= 992){
+  if (width >= 992) {
     heightOpts = 74;
   }
-  if(width <= 991){
+  if (width <= 991) {
     heightOpts = 112;
   }
 
@@ -180,13 +180,13 @@ $(document).ready(function () {
     }
     imgBar.onmouseleave = function (e) {
       $('.bar__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
-        imgBar.src = oldFotoBar
+        imgBar.src = oldFotoBar;
       })
       $('.bar__info__img').stop(true, true).animate({ opacity: 1 }, 400)
     }
   }
 
-  // Код для блоку команди
+  // Код для блоку послуг, стрижок і бару мобільної версії
 
   $('.servicesMob__slider, .haircutsMob__slider, .barMob__slider').slick({
     centerMode: true,
@@ -209,6 +209,24 @@ $(document).ready(function () {
     focusOnSelect: true,
     swipe: true,
   });
+
+  let idTeam = document.getElementsByClassName("team__item__img");
+  let oldFotoTeam;
+  for (let i = 0; i < idTeam.length; i++) {
+    idTeam[i].onmouseover = function (e) {
+      oldFotoTeam = idTeam[i].src;
+      $('.team__item__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
+        idTeam[i].src = idTeam[i].getAttribute("data-img-second");
+      });
+      $('.team__item__img').stop(true, true).animate({ opacity: 1 }, 400,);
+    }
+    idTeam[i].onmouseleave = function (e) {
+      $('.team__item__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
+        idTeam[i].src = oldFotoTeam;
+      })
+      $('.team__item__img').stop(true, true).animate({ opacity: 1 }, 400)
+    }
+  }
 
   // Код для блоку Total Look
 
