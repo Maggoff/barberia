@@ -19,6 +19,8 @@ body{
   background-position: left;
 }
 
+/* Header */
+
 .header{
   height: 100px;
   padding: 36px 0;
@@ -87,9 +89,9 @@ body{
   border-bottom: 1px solid transparent;
 }
 
-.verticalPage{
-  padding-top: 100px;
-}
+/* End Header */
+
+/* Main */
 
 .main__box{
   display: flex;
@@ -150,6 +152,10 @@ body{
   text-align: center;
   color: #000000;
 }
+
+/* End Main */
+
+/* Call To Action */
 
 .callToAction__box{
   display: flex;
@@ -238,15 +244,19 @@ body{
   height: 100%;
 }
 
+/* End Call To Action */
+
+/* Services, Haircuts, Bar */
+
 .services,
-.bar,
-.haircuts{
+.haircuts,
+.bar{
   padding-top: 120px;
 }
 
 .services__title,
-.bar__title,
-.haircuts__title{
+.haircuts__title,
+.bar__title{
   font-family: 'Roboto Slab', serif;
   font-size: 36px;
   line-height: 47px;
@@ -257,8 +267,8 @@ body{
 }
 
 .services__info,
-.bar__info,
-.haircuts__info{
+.haircuts__info,
+.bar__info{
   width: 100%;
   height: 100%;
   display: flex;
@@ -267,14 +277,14 @@ body{
 }
 
 .services__info__img,
-.bar__info__img,
-.haircuts__info__img{
+.haircuts__info__img,
+.bar__info__img{
   width: 100%;
 }
 
 .services__info__text,
-.bar__info__text,
-.haircuts__info__text{
+.haircuts__info__text,
+.bar__info__text{
   margin-top: 44px;
   font-family: 'Gilroy', sans-serif;
   font-size: 20px;
@@ -285,14 +295,13 @@ body{
   color: #999999;
 }
 
-.bar__info__text,
 .haircuts__info__text{
   text-align: left;
 }
 
 .services__menu,
-.bar__menu,
-.haircuts__menu{
+.haircuts__menu,
+.bar__menu{
   width: 100%;
   height: 100%;
   list-style: none;
@@ -305,8 +314,8 @@ body{
 }
 
 .services__menu__item,
-.bar__menu__item,
-.haircuts__menu__item{
+.haircuts__menu__item,
+.bar__menu__item{
   display: flex;
   align-items: center;
   width: 100%;
@@ -319,8 +328,8 @@ body{
 }
 
 .services__menu__box,
-.bar__menu__box,
-.haircuts__menu__box{
+.haircuts__menu__box,
+.bar__menu__box{
   display: flex;
   align-items: center;
   width: 90%;
@@ -328,22 +337,22 @@ body{
 }
 
 .services__menu__item:hover,
-.bar__menu__item:hover,
-.haircuts__menu__item:hover{
+.haircuts__menu__item:hover,
+.bar__menu__item:hover{
   cursor: pointer;
 	color: #000000;
 }
 
 .services__menu__text,
-.bar__menu__text,
-.haircuts__menu__text{
+.haircuts__menu__text,
+.bar__menu__text{
   position: relative;
   padding-right: 1vw;
 }
 
 .services__menu__text::after,
-.bar__menu__text::after,
-.haircuts__menu__text::after{
+.haircuts__menu__text::after,
+.bar__menu__text::after{
   position: absolute;
   content: '';
   right: -1000%;
@@ -355,22 +364,22 @@ body{
 }
 
 .services__menu__item:hover .services__menu__text::after,
-.bar__menu__item:hover .bar__menu__text::after,
-.haircuts__menu__item:hover .haircuts__menu__text::after{
+.haircuts__menu__item:hover .haircuts__menu__text::after,
+.bar__menu__item:hover .bar__menu__text::after{
 	background-color: #1c1c1f;
 }
 
 .services__menu__price,
-.bar__menu__price,
-.haircuts__menu__price{
+.haircuts__menu__price,
+.bar__menu__price{
   width: 10%;
   display: inline-block;
   text-align: right;
 }
 
 .services__menu__line,
-.bar__menu__line,
-.haircuts__menu__line{
+.haircuts__menu__line,
+.bar__menu__line{
   width: 0px;
   height: 1px;
 	background-color: transparent;
@@ -378,8 +387,8 @@ body{
 }
 
 .services__menu__item:hover .services__menu__line,
-.bar__menu__item:hover .bar__menu__line,
-.haircuts__menu__item:hover .haircuts__menu__line{
+.haircuts__menu__item:hover .haircuts__menu__line,
+.bar__menu__item:hover .bar__menu__line{
   width: 1vw;
 	background-color: #1c1c1f;
 	margin-right: 1vw;
@@ -410,6 +419,111 @@ body{
 	background-color: #ffffff;
 	text-decoration: none;
 }
+
+/* Services, Haircuts, Bar */
+
+/* Training */
+
+.training{
+  padding-top: 120px;
+  padding-bottom: 35px;
+}
+
+.training__title{
+  font-family: 'Roboto Slab', serif;
+  font-size: 48px;
+  line-height: 63px;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 36px;
+}
+
+.training__text{
+  font-family: 'Gilroy', sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 90px;
+}
+
+.training__img{
+  width: 100%;
+}
+
+/* Training, Total Look */
+
+.training__item,
+.totalLook__item{
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  padding: 50px 50px 70px;
+  position: relative;
+}
+
+.training__item__title,
+.totalLook__item__title{
+  font-family: 'Roboto Slab', serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+}
+
+.training__item__text,
+.totalLook__item__text{
+  font-family: 'Gilroy', sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  text-align: center;
+  color: #000000;
+  margin-top: 36px;
+}
+
+.training__item__btn,
+.totalLook__item__btn{
+  position: absolute;
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #1c1c1c;
+  border: 1px solid #1c1c1c;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -33px;
+  transition: 0.4s;
+  z-index: 1;
+}
+
+.training__item__btn:hover,
+.totalLook__item__btn:hover{
+  color: #000000;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+.training__item__btn i,
+.totalLook__item__btn i{
+  font-size: 36px;
+  line-height: 21px;
+  margin-left: 24px;
+}
+
+/* End Training */
+
+/* Team */
 
 .team{
   padding-top: 120px;
@@ -537,6 +651,8 @@ body{
   border: 0px solid #ffffff;
 }
 
+/* End Team */
+
 .totalLook{
   padding-top: 120px;
   padding-bottom: 35px;
@@ -603,15 +719,6 @@ body{
   margin-top: 16px;
 }
 
-.totalLook__item,
-.training__item{
-  background-color: #ffffff;
-  width: 100%;
-  height: 100%;
-  padding: 50px 50px 70px;
-  position: relative;
-}
-
 .totalLook__icon{
   position: absolute;
   top: -30px;
@@ -619,97 +726,16 @@ body{
   transform: translateX(-50%);
 }
 
-.totalLook__item__title,
-.training__item__title{
-  font-family: 'Roboto Slab', serif;
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 700;
+/* End Total Look */
+
+/* Footer */
+
+.footer__box{
   text-align: center;
-  color: #000000;
-}
-
-.totalLook__item__text,
-.training__item__text{
-  font-family: 'Gilroy', sans-serif;
-  font-size: 20px;
-  line-height: 30px;
-  font-weight: 400;
-  text-align: center;
-  color: #000000;
-  margin-top: 36px;
-}
-
-.totalLook__item__btn,
-.training__item__btn{
-  position: absolute;
-  font-family: 'Roboto Slab', serif;
-  font-size: 16px;
-  line-height: 21px;
-  font-weight: 400;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-  background-color: #1c1c1c;
-  border: 1px solid #1c1c1c;
-  padding: 20px 40px;
-  display: flex;
-  align-items: center;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -33px;
-  transition: 0.4s;
-  z-index: 1;
-}
-
-.totalLook__item__btn:hover,
-.training__item__btn:hover{
-  color: #000000;
-  background-color: #ffffff;
-  text-decoration: none;
-}
-
-.totalLook__item__btn i,
-.training__item__btn i{
-  font-size: 36px;
-  line-height: 21px;
-  margin-left: 24px;
-}
-
-.training{
-  padding-top: 120px;
-  padding-bottom: 90px;
-}
-
-.training__title{
-  font-family: 'Roboto Slab', serif;
-  font-size: 48px;
-  line-height: 63px;
-  font-weight: 700;
-  text-align: center;
-  color: #000000;
-  margin-bottom: 36px;
-}
-
-.training__text{
-  font-family: 'Gilroy', sans-serif;
-  font-size: 20px;
-  line-height: 30px;
-  font-weight: 400;
-  text-align: center;
-  color: #000000;
   margin-bottom: 90px;
 }
 
-.training__img{
-  width: 100%;
-}
-
-.training__box{
-  text-align: center;
-}
-
-.training__logo{
+.footer__logo{
   margin-top: 150px;
 }
 
@@ -813,6 +839,8 @@ a.footer__credits__text:hover{
   border-bottom: 1px solid #878787;
 }
 
+/* End Footer */
+
 @media(max-width: 1400px){
 
   .header__menu__item{
@@ -829,6 +857,10 @@ a.footer__credits__text:hover{
   .bar__menu__price,
   .haircuts__menu__price{
     width: 13%;
+  }
+
+  .haircuts__menu__btn{
+    margin-left: 65%;
   }
 
 }
@@ -865,6 +897,10 @@ a.footer__credits__text:hover{
   .haircuts__menu__item{
     font-size: 16px;
     line-height: 24px;
+  }
+
+  .haircuts__menu__btn{
+    margin-left: 58%;
   }
 
   .team__item__info{
