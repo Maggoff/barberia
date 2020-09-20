@@ -160,6 +160,10 @@ body{
   background-color: #ffffff;
   border: 16px solid #f8f8f8;
   padding: 6% 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .callToAction__left__title{
@@ -168,7 +172,7 @@ body{
   line-height: 32px;
   font-weight: 700;
   color: #000000;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 }
 
 .callToAction__left__text{
@@ -177,7 +181,7 @@ body{
   line-height: 30px;
   font-weight: 400;
   color: #000000;
-  margin: 16px 0;
+  margin: 8px 0;
 }
 
 .callToAction__left__btn{
@@ -191,7 +195,7 @@ body{
   background-color: #1c1c1c;
   border: 1px solid #1c1c1c;
   padding: 20px 40px;
-  margin-top: 20px;
+  margin-top: 28px;
   position: relative;
   transition: 0.4s;
   display: inline-flex;
@@ -213,14 +217,17 @@ body{
   width: 60%;
   background-color: #f8f8f8;
   border: 16px solid #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .callToAction__right__box{
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
   height: 0;
-  top: 50%;
-  transform: translateY(-53.3%);
+  width: 100%;
 }
 
 .callToAction__right__video{
@@ -435,27 +442,27 @@ body{
 
 .slickPrev{
   position: absolute;
-  left: -10%;
+  left: -10.2%;
   top: 0;
   border: 16px solid #f8f8f8;
   background-color: #ffffff;
   background-image: url(../img/prev.svg);
   background-repeat: no-repeat;
   background-position: center;
-  height: 98.9%;
-  width: 10%;
+  height: 100%;
+  width: 10.2%;
 }
 
 .slickNext{
   position: absolute;
-  right: -10%;
+  right: -10.2%;
   border: 16px solid #f8f8f8;
   background-color: #ffffff;
   background-image: url(../img/next.svg);
   background-repeat: no-repeat;
   background-position: center;
-  height: 98.9%;
-  width: 10%;
+  height: 100%;
+  width: 10.2%;
 }
 
 .team__box{
@@ -555,7 +562,13 @@ body{
   width: 60%;
   border: 16px solid #ffffff;
   background-color: #f8f8f8;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#totalLook__container{
+  width: 100%;
 }
 
 #totalLook__container img{
@@ -567,6 +580,9 @@ body{
   border: 16px solid #f8f8f8;
   background-color: #ffffff;
   padding: 6% 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .totalLook__right__title{
@@ -575,7 +591,7 @@ body{
   line-height: 32px;
   font-weight: 700;
   color: #000000;
-  margin-bottom: 20px;
+  margin-bottom: 32px;
 }
 
 .totalLook__right__text{
@@ -584,20 +600,21 @@ body{
   line-height: 30px;
   font-weight: 400;
   color: #000000;
-  margin: 16px 0;
+  margin-top: 16px;
 }
 
 .totalLook__item,
 .training__item{
   background-color: #ffffff;
   width: 100%;
-  padding: 50px 70px 70px;
+  height: 100%;
+  padding: 50px 50px 70px;
   position: relative;
 }
 
 .totalLook__icon{
   position: absolute;
-  top: -12%;
+  top: -30px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -640,7 +657,7 @@ body{
   align-items: center;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -12%;
+  bottom: -33px;
   transition: 0.4s;
   z-index: 1;
 }
