@@ -15,15 +15,15 @@
 
 <body>
 
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
       <div class="row">
-        <div class="col-lg-2" id="logo">
+        <div class="col-3 mr-auto col-lg-2 m-none order-1" id="logo">
           <a href="#main" class="header__logo">
             <img src="img/logo.svg" alt="Logo">
           </a>
         </div>
-        <div class="col-lg-10">
+        <div class="header__links col-lg-10 order-3 order-lg-2" id="links">
           <nav class="header__menu" id="menu">
             <a href="#services" class="header__menu__item">Услуги</a>
             <a href="#haircuts" class="header__menu__item">Стрижки</a>
@@ -39,6 +39,11 @@
             </div>
           </nav>
         </div>
+        <div class="col-2 order-2 order-lg-3">
+					<a class="header__burger" id="header-burger" href="javascript:void(0);" onclick="myFunction()">
+						<i class="fa fa-bars"></i>
+					</a>
+				</div>
       </div>
     </div>
   </header>
@@ -98,7 +103,7 @@
   </section>
 
   <section class="services" id="services">
-    <div class="container">
+    <div class="container servicesDesc">
       <div class="row">
         <div class="col-lg-12">
           <div class="services__title">
@@ -209,10 +214,74 @@
         </div>
       </div>
     </div>
+    <div class="container servicesMob">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="servicesMob__title">
+            Наши услуги
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="servicesMob__slider">
+            <div class="servicesMob__item">
+              <div class="servicesMob__box">
+                <img src="img/services1.jpg" class="servicesMob__item__img" alt="Services Mobile">
+                <div class="servicesMob__item__info">
+                  <div class="servicesMob__item__info__box">
+                    <div class="servicesMob__item__info__box__text">Стрижка</div>
+                    <span class="servicesMob__item__info__box__line"></span>
+                    <div class="servicesMob__item__info__box__price">500₴</div>
+                  </div>
+                  <div class="servicesMob__info__text">
+                    Краткое но красочное описание услуги
+                    в две строчки текста
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="servicesMob__item">
+              <div class="servicesMob__box">
+                <img src="img/services2.jpg" class="servicesMob__item__img" alt="Services Mobile">
+                <div class="servicesMob__item__info">
+                  <div class="servicesMob__item__info__box">
+                    <div class="servicesMob__item__info__box__text">Стрижка</div>
+                    <span class="servicesMob__item__info__box__line"></span>
+                    <div class="servicesMob__item__info__box__price">500₴</div>
+                  </div>
+                  <div class="servicesMob__info__text">
+                    Краткое но красочное описание услуги
+                    в две строчки текста
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="servicesMob__item">
+              <div class="servicesMob__box">
+                <img src="img/services3.jpg" class="servicesMob__item__img" alt="Services Mobile">
+                <div class="servicesMob__item__info">
+                  <div class="servicesMob__item__info__box">
+                    <div class="servicesMob__item__info__box__text">Стрижка</div>
+                    <span class="servicesMob__item__info__box__line"></span>
+                    <div class="servicesMob__item__info__box__price">500₴</div>
+                  </div>
+                  <div class="servicesMob__info__text">
+                    Краткое но красочное описание услуги
+                    в две строчки текста
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="servicesMob__btn">Записаться</a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section class="haircuts" id="haircuts">
-    <div class="container">
+    <div class="container haircutsDesc">
       <div class="row">
         <div class="col-lg-12">
           <div class="haircuts__title">
@@ -323,10 +392,74 @@
         </div>
       </div>
     </div>
+    <div class="container haircutsMob">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="haircutsMob__title">
+            Стрижки
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="haircutsMob__slider">
+            <div class="haircutsMob__item">
+              <div class="haircutsMob__box">
+                <img src="img/services4.jpg" class="haircutsMob__item__img" alt="Haircuts Mobile">
+                <div class="haircutsMob__item__info">
+                  <div class="haircutsMob__item__info__box">
+                    <div class="haircutsMob__item__info__box__text">Стрижка</div>
+                    <span class="haircutsMob__item__info__box__line"></span>
+                    <div class="haircutsMob__item__info__box__price">500₴</div>
+                  </div>
+                  <div class="haircutsMob__info__text">
+                    Краткое но красочное описание услуги
+                    в две строчки текста
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="haircutsMob__item">
+              <div class="haircutsMob__box">
+                <img src="img/services5.jpg" class="haircutsMob__item__img" alt="Haircuts Mobile">
+                <div class="haircutsMob__item__info">
+                  <div class="haircutsMob__item__info__box">
+                    <div class="haircutsMob__item__info__box__text">Стрижка</div>
+                    <span class="haircutsMob__item__info__box__line"></span>
+                    <div class="haircutsMob__item__info__box__price">500₴</div>
+                  </div>
+                  <div class="haircutsMob__info__text">
+                    Краткое но красочное описание услуги
+                    в две строчки текста
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="haircutsMob__item">
+              <div class="haircutsMob__box">
+                <img src="img/services6.jpg" class="haircutsMob__item__img" alt="Haircuts Mobile">
+                <div class="haircutsMob__item__info">
+                  <div class="haircutsMob__item__info__box">
+                    <div class="haircutsMob__item__info__box__text">Стрижка</div>
+                    <span class="haircutsMob__item__info__box__line"></span>
+                    <div class="haircutsMob__item__info__box__price">500₴</div>
+                  </div>
+                  <div class="haircutsMob__info__text">
+                    Краткое но красочное описание услуги
+                    в две строчки текста
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="haircutsMob__btn">Записаться</a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section class="bar" id="bar">
-    <div class="container">
+    <div class="container barDesc">
       <div class="row">
         <div class="col-lg-12">
           <div class="bar__title">
@@ -377,40 +510,35 @@
               </div>
               <div class="bar__menu__price">300₴</div>
             </li>
-            <li class="bar__menu__item" data-img="img/bar5.jpg" data-text="simple text5"
-              data-img-second="img/bar9.jpg">
+            <li class="bar__menu__item" data-img="img/bar5.jpg" data-text="simple text5" data-img-second="img/bar9.jpg">
               <div class="bar__menu__box">
                 <span class="bar__menu__line"></span>
                 <div class="bar__menu__text">Mrs. Garden</div>
               </div>
               <div class="bar__menu__price">150₴</div>
             </li>
-            <li class="bar__menu__item" data-img="img/bar6.jpg" data-text="simple text6"
-              data-img-second="img/bar8.jpg">
+            <li class="bar__menu__item" data-img="img/bar6.jpg" data-text="simple text6" data-img-second="img/bar8.jpg">
               <div class="bar__menu__box">
                 <span class="bar__menu__line"></span>
                 <div class="bar__menu__text">Pistachio Milk Test Coctail</div>
               </div>
               <div class="bar__menu__price">600₴</div>
             </li>
-            <li class="bar__menu__item" data-img="img/bar7.jpg" data-text="simple text7"
-              data-img-second="img/bar7.jpg">
+            <li class="bar__menu__item" data-img="img/bar7.jpg" data-text="simple text7" data-img-second="img/bar7.jpg">
               <div class="bar__menu__box">
                 <span class="bar__menu__line"></span>
                 <div class="bar__menu__text">Eros</div>
               </div>
               <div class="bar__menu__price">400₴</div>
             </li>
-            <li class="bar__menu__item" data-img="img/bar8.jpg" data-text="simple text8"
-              data-img-second="img/bar6.jpg">
+            <li class="bar__menu__item" data-img="img/bar8.jpg" data-text="simple text8" data-img-second="img/bar6.jpg">
               <div class="bar__menu__box">
                 <span class="bar__menu__line"></span>
                 <div class="bar__menu__text">Chinatown</div>
               </div>
               <div class="bar__menu__price">400₴</div>
             </li>
-            <li class="bar__menu__item" data-img="img/bar9.jpg" data-text="simple text9"
-              data-img-second="img/bar5.jpg">
+            <li class="bar__menu__item" data-img="img/bar9.jpg" data-text="simple text9" data-img-second="img/bar5.jpg">
               <div class="bar__menu__box">
                 <span class="bar__menu__line"></span>
                 <div class="bar__menu__text">Pistachio Milk</div>
@@ -450,6 +578,70 @@
               <div class="bar__menu__price">150₴</div>
             </li>
           </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container barMob">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="barMob__title">
+            Барная Карта
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="barMob__slider">
+            <div class="barMob__item">
+              <div class="barMob__box">
+                <img src="img/bar1.jpg" class="barMob__item__img" alt="Bar Mobile">
+                <div class="barMob__item__info">
+                  <div class="barMob__item__info__box">
+                    <div class="barMob__item__info__box__text">Стрижка</div>
+                    <span class="barMob__item__info__box__line"></span>
+                    <div class="barMob__item__info__box__price">500₴</div>
+                  </div>
+                  <div class="barMob__info__text">
+                    Краткое но красочное описание услуги
+                    в две строчки текста
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="barMob__item">
+              <div class="barMob__box">
+                <img src="img/bar2.jpg" class="barMob__item__img" alt="Bar Mobile">
+                <div class="barMob__item__info">
+                  <div class="barMob__item__info__box">
+                    <div class="barMob__item__info__box__text">Стрижка</div>
+                    <span class="barMob__item__info__box__line"></span>
+                    <div class="barMob__item__info__box__price">500₴</div>
+                  </div>
+                  <div class="barMob__info__text">
+                    Краткое но красочное описание услуги
+                    в две строчки текста
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="barMob__item">
+              <div class="barMob__box">
+                <img src="img/bar3.jpg" class="barMob__item__img" alt="Bar Mobile">
+                <div class="barMob__item__info">
+                  <div class="barMob__item__info__box">
+                    <div class="barMob__item__info__box__text">Стрижка</div>
+                    <span class="barMob__item__info__box__line"></span>
+                    <div class="barMob__item__info__box__price">500₴</div>
+                  </div>
+                  <div class="barMob__info__text">
+                    Краткое но красочное описание услуги
+                    в две строчки текста
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="barMob__btn">Записаться</a>
         </div>
       </div>
     </div>
@@ -517,11 +709,10 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-10 m-auto">
+        <div class="col-lg-10 m-auto order-2 order-lg-1">
           <div class="team__slider">
             <div class="team__item">
               <div class="team__box">
-                <img src="img/team1.JPG" class="team__item__img" alt="Team">
                 <div class="team__item__info">
                   <div class="team__item__info__title">
                     Наталия Михнюк
@@ -531,11 +722,11 @@
                   </div>
                   <a href="#" class="team__item__info__btn">Записаться к Нате</a>
                 </div>
+                <img src="img/team1.JPG" class="team__item__img" alt="Team">
               </div>
             </div>
             <div class="team__item">
               <div class="team__box">
-                <img src="img/team1.JPG" class="team__item__img" alt="Team">
                 <div class="team__item__info">
                   <div class="team__item__info__title">
                     Наталия Михнюк
@@ -545,11 +736,11 @@
                   </div>
                   <a href="#" class="team__item__info__btn">Записаться к Нате</a>
                 </div>
+                <img src="img/team1.JPG" class="team__item__img" alt="Team">
               </div>
             </div>
             <div class="team__item">
               <div class="team__box">
-                <img src="img/team1.JPG" class="team__item__img" alt="Team">
                 <div class="team__item__info">
                   <div class="team__item__info__title">
                     Наталия Михнюк
@@ -559,13 +750,12 @@
                   </div>
                   <a href="#" class="team__item__info__btn">Записаться к Нате</a>
                 </div>
+                <img src="img/team1.JPG" class="team__item__img" alt="Team">
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-12 order-1 order-lg-2">
           <div class="team__galery">
             <img src="img/teamGalery1.jpg" alt="Team Galery" class="team__galery__foto">
             <img src="img/teamGalery2.jpg" alt="Team Galery" class="team__galery__foto">
@@ -608,7 +798,7 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-lg-5 ml-auto mr-auto">
+        <div class="col-lg-5 m-auto ml-lg-auto mr-lg-auto">
           <div class="totalLook__item">
             <img src="img/totalLookIcon1.svg" class="totalLook__icon" alt="Look Book">
             <div class="totalLook__item__title">
@@ -624,7 +814,7 @@
             </a>
           </div>
         </div>
-        <div class="col-lg-5 ml-auto mr-auto">
+        <div class="col-lg-5 m-auto ml-lg-auto mr-lg-auto">
           <div class="totalLook__item">
             <img src="img/totalLookIcon2.svg" class="totalLook__icon" alt="Shopping Tour">
             <div class="totalLook__item__title">
@@ -656,7 +846,7 @@
     <div class="container-fluid social">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3 mr-auto">
+          <div class="col-lg-3 mr-auto order-2 order-lg-1">
             <div class="footer__social">
               <div class="footer__box__left">
                 <a href="#" class="footer__social__text">
@@ -670,7 +860,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4 order-1 order-lg-2">
             <div class="footer__address">
               <div class="footer__address__text">
                 Киев, ул. Саксаганского, 44
@@ -680,7 +870,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 ml-auto">
+          <div class="col-lg-3 ml-auto order-3 order-lg-3">
             <div class="footer__contacts">
               <div class="footer__box__right">
                 <a href="#" class="footer__contacts__text">

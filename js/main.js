@@ -2,20 +2,61 @@ $(document).ready(function () {
 
   //Код для плавного скролу пунктів меню
 
-  $("#menu, #logo").on("click", "a", function (event) {
+  $("#logo").on("click", "a", function (event) {
     event.preventDefault();
-    var id = $(this).attr('href'),
+    let id = $(this).attr('href'),
       top = $(id).offset().top;
     $('body,html').animate({ scrollTop: top }, 600);
+
+    let x = document.getElementById("links");
+    x.classList.remove("show");
+    let header = document.getElementById("header");
+    header.classList.remove("header__max");
+    document.body.classList.remove("body__overflow");
+  });
+
+  $("#menu").on("click", "a", function (event) {
+    let btn = document.getElementById("header-burger");
+    let btnStyle = getComputedStyle(btn);
+    event.preventDefault();
+    let id = $(this).attr('href'),
+      top = $(id).offset().top;
+
+    if (btnStyle.display === "none") {
+      $('body,html').animate({ scrollTop: top }, 600);
+    } else {
+      setTimeout(scroll, 800);
+    }
+
+    let x = document.getElementById("links");
+    x.classList.toggle("show");
+    let header = document.getElementById("header");
+    header.classList.toggle("header__max");
+    document.body.classList.remove("body__overflow");
+
+    function scroll() {
+      $('body,html').animate({ scrollTop: top }, 600);
+    };
   });
 
   //Код для анімації фраз
+
+  let width = screen.width;
+  let heightOpts;
+  if(width >= 992){
+    heightOpts = 74;
+  }
+  if(width <= 991){
+    heightOpts = 112;
+  }
+
+  // width >= 393 && 
 
   let vsOpts = {
     $slides: $('.main__slide'),
     $list: $('.main__slides'),
     duration: 6,
-    lineHeight: 74
+    lineHeight: heightOpts
   };
 
   let vSlide = new TimelineMax({
@@ -52,7 +93,7 @@ $(document).ready(function () {
       }
     }
     img.onmouseover = function (e) {
-      if(oldI == 100){
+      if (oldI == 100) {
         oldI = 0;
       }
       oldFoto = img.src;
@@ -90,7 +131,7 @@ $(document).ready(function () {
       }
     }
     imgHaircut.onmouseover = function (e) {
-      if(oldIHaircut == 100){
+      if (oldIHaircut == 100) {
         oldIHaircut = 0;
       }
       oldFotoHaircut = imgHaircut.src;
@@ -128,7 +169,7 @@ $(document).ready(function () {
       }
     }
     imgBar.onmouseover = function (e) {
-      if(oldIBar == 100){
+      if (oldIBar == 100) {
         oldIBar = 0;
       }
       oldFotoBar = imgBar.src;
@@ -147,6 +188,18 @@ $(document).ready(function () {
 
   // Код для блоку команди
 
+  $('.servicesMob__slider, .haircutsMob__slider, .barMob__slider').slick({
+    centerMode: true,
+    centerPadding: '0px',
+    slidesToShow: 1,
+    prevArrow: '<button type="button" class="slickPrevMob"></button>',
+    nextArrow: '<button type="button" class="slickNextMob"></button>',
+    focusOnSelect: true,
+    swipe: true,
+  });
+
+  // Код для блоку команди
+
   $('.team__slider').slick({
     centerMode: true,
     centerPadding: '0px',
@@ -155,19 +208,6 @@ $(document).ready(function () {
     nextArrow: '<button type="button" class="slickNext"></button>',
     focusOnSelect: true,
     swipe: true,
-    // responsive: [
-    //   {
-    //     breakpoint: 1030,
-    //     settings: {
-    //       arrows: false,
-    //       centerMode: true,
-    //       dots: true,
-    //       centerPadding: '0px',
-    //       slidesToShow: 3,
-    //       slidesToScroll: 3,
-    //     }
-    //   }
-    // ]
   });
 
   // Код для блоку Total Look
@@ -183,3 +223,11 @@ $(document).ready(function () {
   });
 
 });
+
+function myFunction() {
+  let x = document.getElementById("links");
+  x.classList.toggle("show");
+  let header = document.getElementById("header");
+  header.classList.toggle("header__max");
+  document.body.classList.toggle("body__overflow");
+}
