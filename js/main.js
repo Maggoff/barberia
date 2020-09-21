@@ -41,12 +41,11 @@ $(document).ready(function () {
 
   //Код для анімації фраз
 
-  let width = screen.width;
   let heightOpts;
-  if (width >= 992) {
+  if (screen.width >= 992) {
     heightOpts = 74;
   }
-  if (width <= 991) {
+  if (screen.width <= 991) {
     heightOpts = 112;
   }
 
@@ -248,10 +247,16 @@ $(document).ready(function () {
 
   let idTeamGalery = document.getElementsByClassName("team__galery__foto");
   let idDotsGalery = document.getElementsByClassName("slick-dots");
+  let galeryHeight = document.getElementsByClassName("team__galery");
+
+  galeryHeight = getComputedStyle(galeryHeight[0]);
+  if(screen.width <= 991){
+    idDotsGalery[0].style.height = galeryHeight.height;
+    idDotsGalery[0].style.top = '-' + galeryHeight.height;
+  }
   idDotsGalery = idDotsGalery[0].children;
 
   for(let i = 0; i < idDotsGalery.length; i++){
-    console.log(idDotsGalery[i].children);
     idDotsGalery[i].onmouseover = function (e) {
       idTeamGalery[i].classList.add("galery__hover");
     }

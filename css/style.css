@@ -239,7 +239,7 @@ body{
 
 .callToAction__right{
   width: 60%;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   border: 16px solid #ffffff;
   display: flex;
   flex-direction: column;
@@ -924,6 +924,11 @@ a.footer__credits__text:hover{
     margin-left: 65%;
   }
 
+  .slick-dots{
+    height: 112.7px;
+    bottom: -112.7px;
+  }
+
 }
 
 @media(max-width: 1199px){
@@ -966,6 +971,11 @@ a.footer__credits__text:hover{
 
   .team__item__info{
     padding: 0 5vh;
+  }
+
+  .slick-dots{
+    height: 94.42px;
+    bottom: -94.42px;
   }
 
 }
@@ -1363,6 +1373,12 @@ a.footer__credits__text:hover{
     background-image: url(../img/nextMob.svg);
     height: 50px;
     width: 48%;
+  }
+
+  .slick-dots{
+    bottom: auto;
+    left: 0;
+    width: 100%;
   }
 
   .team__box{
