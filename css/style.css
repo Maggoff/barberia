@@ -24,6 +24,61 @@ body{
   overflow: hidden;
 }
 
+.button{
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #1c1c1c;
+  border: 1px solid #1c1c1c;
+  margin-top: 36px;
+  padding: 20px 40px;
+  text-align: center;
+  text-transform: uppercase;
+	transition: 0.4s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.button:hover{
+  color: #000000;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+.img__svg{
+  margin-left: 24px;
+}
+
+.img__svg path{
+  transition: 0.4s;
+}
+
+.button:hover .img__svg path{
+  fill: #000000;
+}
+
+.button__showcase{
+  margin-top: 64px;
+}
+
+.button__left{
+  margin-left: 69%;
+}
+
+.button__team{
+  margin-top: 0;
+}
+
+.button__center{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -33px;
+  z-index: 1;
+}
+
 /* Header */
 
 .header{
@@ -201,42 +256,6 @@ body{
   margin: 8px 0;
 }
 
-.callToAction__left__btn{
-  font-family: 'Roboto Slab', serif;
-  font-size: 16px;
-  line-height: 21px;
-  font-weight: 400;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-  background-color: #1c1c1c;
-  border: 1px solid #1c1c1c;
-  padding: 20px 40px;
-  margin-top: 28px;
-  position: relative;
-  transition: 0.4s;
-  display: inline-flex;
-  align-items: center;
-}
-
-.callToAction__left__btn:hover{
-  color: #000000;
-  background-color: #ffffff;
-  text-decoration: none;
-}
-
-.img__svg{
-  margin-left: 24px;
-}
-
-.img__svg path{
-  transition: 0.4s;
-}
-
-.callToAction__left__btn:hover .img__svg path{
-  fill: #000000;
-}
-
 .callToAction__right{
   width: 60%;
   background-color: #ffffff;
@@ -266,21 +285,15 @@ body{
 
 /* Services, Haircuts, Bar */
 
-.services,
-.haircuts,
-.bar{
+.showcase{
   padding-top: 120px;
 }
 
-.servicesMob,
-.haircutsMob,
-.barMob{
+.showcaseMob{
   display: none;
 }
 
-.services__title,
-.haircuts__title,
-.bar__title{
+.title{
   font-family: 'Roboto Slab', serif;
   font-size: 36px;
   line-height: 47px;
@@ -290,24 +303,18 @@ body{
   color: #000000;
 }
 
-.services__info,
-.haircuts__info,
-.bar__info{
+.showcase__info{
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.services__info__img,
-.haircuts__info__img,
-.bar__info__img{
+.showcase__info__img{
   width: 100%;
 }
 
-.services__info__text,
-.haircuts__info__text,
-.bar__info__text{
+.showcase__info__text{
   margin-top: 64px;
   font-family: 'Gilroy', sans-serif;
   font-size: 20px;
@@ -318,13 +325,11 @@ body{
   color: #999999;
 }
 
-.haircuts__info__text{
+.info__text__left{
   text-align: left;
 }
 
-.services__menu,
-.haircuts__menu,
-.bar__menu{
+.showcase__menu{
   width: 100%;
   height: 100%;
   list-style: none;
@@ -335,9 +340,7 @@ body{
   align-items: center;
 }
 
-.services__menu__item,
-.haircuts__menu__item,
-.bar__menu__item{
+.showcase__menu__item{
   display: flex;
   align-items: center;
   width: 100%;
@@ -349,38 +352,28 @@ body{
   transition: 0.4s;
 }
 
-.services__menu__item:last-child,
-.haircuts__menu__item:last-child,
-.bar__menu__item:last-child{
+.showcase__menu__item:last-child{
   margin-bottom: 0px;
 }
 
-.services__menu__box,
-.haircuts__menu__box,
-.bar__menu__box{
+.showcase__menu__box{
   display: flex;
   align-items: center;
   width: 90%;
   overflow: hidden;
 }
 
-.services__menu__item:hover,
-.haircuts__menu__item:hover,
-.bar__menu__item:hover{
+.showcase__menu__item:hover{
   cursor: pointer;
 	color: #000000;
 }
 
-.services__menu__text,
-.haircuts__menu__text,
-.bar__menu__text{
+.showcase__menu__text{
   position: relative;
   padding-right: 1vw;
 }
 
-.services__menu__text::after,
-.haircuts__menu__text::after,
-.bar__menu__text::after{
+.showcase__menu__text::after{
   position: absolute;
   content: '';
   right: -1000%;
@@ -391,61 +384,27 @@ body{
   transition: 0.4s;
 }
 
-.services__menu__item:hover .services__menu__text::after,
-.haircuts__menu__item:hover .haircuts__menu__text::after,
-.bar__menu__item:hover .bar__menu__text::after{
+.showcase__menu__item:hover .showcase__menu__text::after{
 	background-color: #1c1c1c;
 }
 
-.services__menu__price,
-.haircuts__menu__price,
-.bar__menu__price{
+.showcase__menu__price{
   width: 10%;
   display: inline-block;
   text-align: right;
 }
 
-.services__menu__line,
-.haircuts__menu__line,
-.bar__menu__line{
+.showcase__menu__line{
   width: 0px;
   height: 1px;
 	background-color: transparent;
 	transition: 0.4s;
 }
 
-.services__menu__item:hover .services__menu__line,
-.haircuts__menu__item:hover .haircuts__menu__line,
-.bar__menu__item:hover .bar__menu__line{
+.showcase__menu__item:hover .showcase__menu__line{
   width: 1vw;
 	background-color: #1c1c1c;
 	margin-right: 1vw;
-}
-
-.services__menu__btn,
-.haircuts__menu__btn{
-  font-family: 'Roboto Slab', serif;
-  font-size: 16px;
-  line-height: 21px;
-  font-weight: 400;
-  color: #ffffff;
-  margin-top: 64px;
-	padding: 20px 40px;
-	background-color: #000000;
-  border: 1px solid #000000;
-  text-transform: uppercase;
-	transition: 0.4s;
-}
-
-.haircuts__menu__btn{
-  margin-left: 69%;
-}
-
-.services__menu__btn:hover,
-.haircuts__menu__btn:hover{
-	color: #000000;
-	background-color: #ffffff;
-	text-decoration: none;
 }
 
 /* Services, Haircuts, Bar */
@@ -515,35 +474,6 @@ body{
   text-align: center;
   color: #000000;
   margin-top: 36px;
-}
-
-.training__item__btn,
-.totalLook__item__btn{
-  position: absolute;
-  font-family: 'Roboto Slab', serif;
-  font-size: 16px;
-  line-height: 21px;
-  font-weight: 400;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-  background-color: #1c1c1c;
-  border: 1px solid #1c1c1c;
-  padding: 20px 40px;
-  display: flex;
-  align-items: center;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -33px;
-  transition: 0.4s;
-  z-index: 1;
-}
-
-.training__item__btn:hover,
-.totalLook__item__btn:hover{
-  color: #000000;
-  background-color: #ffffff;
-  text-decoration: none;
 }
 
 .training__item__btn:hover .img__svg path,
@@ -677,26 +607,6 @@ body{
   margin: 48px 0;
 }
 
-.team__item__info__btn{
-  font-family: 'Roboto Slab', serif;
-  font-size: 16px;
-  line-height: 21px;
-  font-weight: 400;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-  padding: 20px 40px;
-  background-color: #1c1c1c;
-  border: 1px solid #1c1c1c;
-  transition: 0.4s;
-}
-
-.team__item__info__btn:hover{
-  background-color: #ffffff;
-  color: #000000;
-  text-decoration: none;
-}
-
 .team__galery{
   display: flex;
   background-color: #ffffff;
@@ -738,7 +648,7 @@ body{
 .totalLook__left{
   width: 60%;
   border: 16px solid #ffffff;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -904,24 +814,20 @@ a.footer__credits__text:hover{
 
 @media(max-width: 1399px){
 
+  .button__left{
+    margin-left: 65%;
+  }
+
   .header__menu__item{
     margin-left: 4%;
   }
 
-  .services__menu__box,
-  .bar__menu__box,
-  .haircuts__menu__box{
+  .showcase__menu__box{
     width: 87%;
   }
 
-  .services__menu__price,
-  .bar__menu__price,
-  .haircuts__menu__price{
+  .showcase__menu__price{
     width: 13%;
-  }
-
-  .haircuts__menu__btn{
-    margin-left: 65%;
   }
 
   .slick-dots{
@@ -932,6 +838,10 @@ a.footer__credits__text:hover{
 }
 
 @media(max-width: 1199px){
+
+  .button__left{
+    margin-left: 58%;
+  }
 
   .header__menu__item{
     margin-left: 2%;
@@ -958,15 +868,9 @@ a.footer__credits__text:hover{
     padding: 15px 30px;
   }
 
-  .services__menu__item,
-  .bar__menu__item,
-  .haircuts__menu__item{
+  .showcase__menu__item{
     font-size: 16px;
     line-height: 24px;
-  }
-
-  .haircuts__menu__btn{
-    margin-left: 58%;
   }
 
   .team__item__info{
@@ -981,6 +885,19 @@ a.footer__credits__text:hover{
 }
 
 @media(max-width: 991px){
+
+  .button{
+    display: block;
+    width: 100%;
+  }
+
+  .button__center{
+    width: auto;
+  }
+
+  .img__svg{
+    display: none;
+  }
 
   .header{
     height: 8vh;
@@ -1115,39 +1032,25 @@ a.footer__credits__text:hover{
 
   /* End Call To Action */
 
-  .servicesDesc,
-  .haircutsDesc,
-  .barDesc{
+  .showcaseDesc{
     display: none;
   }
 
-  .servicesMob,
-  .haircutsMob,
-  .barMob{
+  .showcaseMob{
     display: block;
   }
 
-  .services,
-  .haircuts,
-  .bar{
+  .showcase{
     padding-top: 80px;
   }
   
-  .servicesMob__title,
-  .haircutsMob__title,
-  .barMob__title{
-    font-family: 'Roboto Slab', serif;
+  .title{
     font-size: 28px;
     line-height: 37px;
-    font-weight: 700;
-    text-align: center;
-    color: #000000;
     margin-bottom: 36px;
   }
 
-  .servicesMob__slider,
-  .haircutsMob__slider,
-  .barMob__slider{
+  .showcaseMob__slider{
     position: relative;
     display: flex;
   }
@@ -1178,22 +1081,16 @@ a.footer__credits__text:hover{
     width: 48%;
   }
   
-  .servicesMob__box,
-  .haircutsMob__box,
-  .barMob__box{
+  .showcaseMob__box{
     display: flex;
     flex-direction: column;
   }
   
-  .servicesMob__item__img,
-  .haircutsMob__item__img,
-  .barMob__item__img{
+  .showcaseMob__item__img{
     width: 100%;
   }
   
-  .servicesMob__item__info,
-  .haircutsMob__item__info,
-  .barMob__item__info{
+  .showcaseMob__item__info{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1201,9 +1098,7 @@ a.footer__credits__text:hover{
     align-items: flex-start;
   }
 
-  .servicesMob__item__info__box,
-  .haircutsMob__item__info__box,
-  .barMob__item__info__box{
+  .showcaseMob__item__info__box{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1212,9 +1107,7 @@ a.footer__credits__text:hover{
     width: 100%;
   }
 
-  .servicesMob__item__info__box__text,
-  .haircutsMob__item__info__box__text,
-  .barMob__item__info__box__text{
+  .showcaseMob__item__info__box__text{
     font-family: 'Gilroy', sans-serif;
     font-size: 16px;
     line-height: 24px;
@@ -1223,17 +1116,13 @@ a.footer__credits__text:hover{
     margin-right: 20px;
   }
 
-  .servicesMob__item__info__box__line,
-  .haircutsMob__item__info__box__line,
-  .barMob__item__info__box__line{
+  .showcaseMob__item__info__box__line{
     height: 1px;
     width: 100%;
     background-color: #e4e4e4;
   }
 
-  .servicesMob__item__info__box__price,
-  .haircutsMob__item__info__box__price,
-  .barMob__item__info__box__price{
+  .showcaseMob__item__info__box__price{
     font-family: 'Gilroy', sans-serif;
     font-size: 16px;
     line-height: 24px;
@@ -1242,9 +1131,7 @@ a.footer__credits__text:hover{
     margin-left: 20px;
   }
 
-  .servicesMob__info__text,
-  .haircutsMob__info__text,
-  .barMob__info__text{
+  .showcaseMob__info__text{
     font-family: 'Gilroy', sans-serif;
     font-size: 16px;
     line-height: 24px;
@@ -1253,9 +1140,7 @@ a.footer__credits__text:hover{
     margin-bottom: 24px;
   }
   
-  .servicesMob__btn,
-  .haircutsMob__btn,
-  .barMob__btn{
+  .showcaseMob__btn{
     font-family: 'Roboto Slab', serif;
     font-size: 16px;
     line-height: 21px;
@@ -1271,9 +1156,7 @@ a.footer__credits__text:hover{
     transition: 0.4s;
   }
   
-  .servicesMob__btn:hover,
-  .haircutsMob__btn:hover,
-  .barMob__btn:hover{
+  .showcaseMob__btn:hover{
     background-color: #ffffff;
     color: #000000;
     text-decoration: none;

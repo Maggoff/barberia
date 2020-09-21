@@ -90,7 +90,7 @@ $(document).ready(function () {
 
   // Код для блоку послуг
 
-  let id = document.getElementsByClassName("services__menu__item");
+  let id = document.getElementsByClassName("services__item");
   let img = document.getElementById("services__info__img");
   let txt = document.getElementById("services__info__text");
   let oldI = 100;
@@ -98,37 +98,37 @@ $(document).ready(function () {
   img.src = id[0].getAttribute("data-img");
   txt.innerHTML = id[0].getAttribute("data-text");
   for (let i = 0; i < id.length; i++) {
-    id[i].onmouseover = function (e) {
+    $(id[i]).hover(function(){
       if (oldI != i) {
         oldI = i;
-        $('.services__info__img, .services__info__text').stop(true, true).animate({ opacity: 0 }, 800, function () {
+        $('#services__info__img, #services__info__text').stop(true, true).animate({ opacity: 0 }, 800, function () {
           img.src = id[i].getAttribute("data-img");
           txt.innerHTML = id[i].getAttribute("data-text");
         });
-        $('.services__info__img, .services__info__text').stop(true, true).animate({ opacity: 1 }, 800,);
+        $('#services__info__img, #services__info__text').stop(true, true).animate({ opacity: 1 }, 800,);
       }
-    }
+    });
     img.onmouseover = function (e) {
       if (oldI == 100) {
         oldI = 0;
       }
       oldFoto = img.src;
-      $('.services__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
+      $('#services__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
         img.src = id[oldI].getAttribute("data-img-second");
       })
-      $('.services__info__img').stop(true, true).animate({ opacity: 1 }, 400)
+      $('#services__info__img').stop(true, true).animate({ opacity: 1 }, 400)
     }
     img.onmouseleave = function (e) {
-      $('.services__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
+      $('#services__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
         img.src = oldFoto
       })
-      $('.services__info__img').stop(true, true).animate({ opacity: 1 }, 400)
+      $('#services__info__img').stop(true, true).animate({ opacity: 1 }, 400)
     }
   }
 
   // Код для блоку стрижок
 
-  let idHaircut = document.getElementsByClassName("haircuts__menu__item");
+  let idHaircut = document.getElementsByClassName("haircuts__item");
   let imgHaircut = document.getElementById("haircuts__info__img");
   let txtHaircut = document.getElementById("haircuts__info__text");
   let oldIHaircut = 100;
@@ -136,37 +136,37 @@ $(document).ready(function () {
   imgHaircut.src = idHaircut[0].getAttribute("data-img");
   txtHaircut.innerHTML = idHaircut[0].getAttribute("data-text");
   for (let i = 0; i < idHaircut.length; i++) {
-    idHaircut[i].onmouseover = function (e) {
+    $(idHaircut[i]).hover(function(){
       if (oldIHaircut != i) {
         oldIHaircut = i;
-        $('.haircuts__info__img, .haircuts__info__text').stop(true, true).animate({ opacity: 0 }, 800, function () {
+        $('#haircuts__info__img, #haircuts__info__text').stop(true, true).animate({ opacity: 0 }, 800, function () {
           imgHaircut.src = idHaircut[i].getAttribute("data-img");
           txtHaircut.innerHTML = idHaircut[i].getAttribute("data-text");
         });
-        $('.haircuts__info__img, .haircuts__info__text').stop(true, true).animate({ opacity: 1 }, 800,);
+        $('#haircuts__info__img, #haircuts__info__text').stop(true, true).animate({ opacity: 1 }, 800,);
       }
-    }
+    });
     imgHaircut.onmouseover = function (e) {
       if (oldIHaircut == 100) {
         oldIHaircut = 0;
       }
       oldFotoHaircut = imgHaircut.src;
-      $('.haircuts__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
+      $('#haircuts__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
         imgHaircut.src = idHaircut[oldIHaircut].getAttribute("data-img-second");
       })
-      $('.haircuts__info__img').stop(true, true).animate({ opacity: 1 }, 400)
+      $('#haircuts__info__img').stop(true, true).animate({ opacity: 1 }, 400)
     }
     imgHaircut.onmouseleave = function (e) {
-      $('.haircuts__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
+      $('#haircuts__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
         imgHaircut.src = oldFotoHaircut
       })
-      $('.haircuts__info__img').stop(true, true).animate({ opacity: 1 }, 400)
+      $('#haircuts__info__img').stop(true, true).animate({ opacity: 1 }, 400)
     }
   }
 
   // Код для блоку бару
 
-  let idBar = document.getElementsByClassName("bar__menu__item");
+  let idBar = document.getElementsByClassName("bar__item");
   let imgBar = document.getElementById("bar__info__img");
   let txtBar = document.getElementById("bar__info__text");
   let oldIBar = 100;
@@ -174,37 +174,37 @@ $(document).ready(function () {
   imgBar.src = idBar[0].getAttribute("data-img");
   txtBar.innerHTML = idBar[0].getAttribute("data-text");
   for (let i = 0; i < idBar.length; i++) {
-    idBar[i].onmouseover = function (e) {
+    $(idBar[i]).hover(function(){
       if (oldIBar != i) {
         oldIBar = i;
-        $('.bar__info__img, .bar__info__text').stop(true, true).animate({ opacity: 0 }, 800, function () {
+        $('#bar__info__img, #bar__info__text').stop(true, true).animate({ opacity: 0 }, 800, function () {
           imgBar.src = idBar[i].getAttribute("data-img");
           txtBar.innerHTML = idBar[i].getAttribute("data-text");
         });
-        $('.bar__info__img, .bar__info__text').stop(true, true).animate({ opacity: 1 }, 800,);
+        $('#bar__info__img, #bar__info__text').stop(true, true).animate({ opacity: 1 }, 800,);
       }
-    }
+    });
     imgBar.onmouseover = function (e) {
       if (oldIBar == 100) {
         oldIBar = 0;
       }
       oldFotoBar = imgBar.src;
-      $('.bar__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
+      $('#bar__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
         imgBar.src = idBar[oldIBar].getAttribute("data-img-second");
       })
-      $('.bar__info__img').stop(true, true).animate({ opacity: 1 }, 400)
+      $('#bar__info__img').stop(true, true).animate({ opacity: 1 }, 400)
     }
     imgBar.onmouseleave = function (e) {
-      $('.bar__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
+      $('#bar__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
         imgBar.src = oldFotoBar;
       })
-      $('.bar__info__img').stop(true, true).animate({ opacity: 1 }, 400)
+      $('#bar__info__img').stop(true, true).animate({ opacity: 1 }, 400)
     }
   }
 
   // Код для блоку послуг, стрижок і бару мобільної версії
 
-  $('.servicesMob__slider, .haircutsMob__slider, .barMob__slider').slick({
+  $('.showcaseMob__slider').slick({
     centerMode: true,
     centerPadding: '0px',
     slidesToShow: 1,
