@@ -325,6 +325,10 @@ body{
   color: #999999;
 }
 
+.showcase__info__text__clear{
+  margin-top: 0;
+}
+
 .info__text__left{
   text-align: left;
 }
