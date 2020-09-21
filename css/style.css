@@ -834,6 +834,11 @@ a.footer__credits__text:hover{
     width: 13%;
   }
 
+  .training__item,
+  .totalLook__item{
+    padding: 41px 70px 78px;
+  }
+
   .slick-dots{
     height: 112.7px;
     bottom: -112.7px;
@@ -875,6 +880,11 @@ a.footer__credits__text:hover{
   .showcase__menu__item{
     font-size: 16px;
     line-height: 24px;
+  }
+
+  .training__item,
+  .totalLook__item{
+    padding: 41px 40px 78px;
   }
 
   .team__item__info{
