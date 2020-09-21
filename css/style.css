@@ -225,9 +225,16 @@ body{
   text-decoration: none;
 }
 
-.callToAction__left__btn i{
+.img__svg{
   margin-left: 24px;
-  font-size: 36px;
+}
+
+.img__svg path{
+  transition: 0.4s;
+}
+
+.callToAction__left__btn:hover .img__svg path{
+  fill: #000000;
 }
 
 .callToAction__right{
@@ -290,7 +297,6 @@ body{
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .services__info__img,
@@ -302,7 +308,7 @@ body{
 .services__info__text,
 .haircuts__info__text,
 .bar__info__text{
-  margin-top: 44px;
+  margin-top: 64px;
   font-family: 'Gilroy', sans-serif;
   font-size: 20px;
   line-height: 30px;
@@ -327,7 +333,6 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .services__menu__item,
@@ -336,12 +341,18 @@ body{
   display: flex;
   align-items: center;
   width: 100%;
-  margin: 8px 0;
+  margin-bottom: 16px;
   font-family: 'Gilroy', sans-serif;
   font-size: 20px;
   line-height: 30px;
 	color: #3d3d3d;
   transition: 0.4s;
+}
+
+.services__menu__item:last-child,
+.haircuts__menu__item:last-child,
+.bar__menu__item:last-child{
+  margin-bottom: 0px;
 }
 
 .services__menu__box,
@@ -418,7 +429,7 @@ body{
   line-height: 21px;
   font-weight: 400;
   color: #ffffff;
-  margin-top: 44px;
+  margin-top: 64px;
 	padding: 20px 40px;
 	background-color: #000000;
   border: 1px solid #000000;
@@ -477,8 +488,12 @@ body{
   background-color: #ffffff;
   width: 100%;
   height: 100%;
-  padding: 50px 50px 70px;
+  padding: 41px 110px 78px;
   position: relative;
+}
+
+.totalLook__item{
+  padding: 64px 110px 78px;
 }
 
 .training__item__title,
@@ -531,11 +546,9 @@ body{
   text-decoration: none;
 }
 
-.training__item__btn i,
-.totalLook__item__btn i{
-  font-size: 36px;
-  line-height: 21px;
-  margin-left: 24px;
+.training__item__btn:hover .img__svg path,
+.totalLook__item__btn:hover .img__svg path{
+  fill: #000000;
 }
 
 /* End Training */
@@ -594,6 +607,36 @@ body{
   background-position: center;
   height: 100%;
   width: 10.2%;
+}
+
+.slick-dots{
+  position: absolute;
+  height: 128.59px;
+  bottom: -128.95px;
+  left: -10.2%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 120.4%;
+  z-index: 2;
+}
+
+.slick-dots li{
+  width: 20%;
+  transform: scale(0.8);
+}
+
+.slick-dots li:hover{
+  transform: scale(1);
+}
+
+.slick-dots li button{
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  color: transparent;
+  border: none;
 }
 
 .team__box{
@@ -656,20 +699,17 @@ body{
 
 .team__galery{
   display: flex;
+  background-color: #ffffff;
 }
 
 .team__galery__foto{
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   width: 20%;
-  height: 150px;
   transition: 0.4s;
-  border: 16px solid #ffffff;
+  transform: scale(0.8);
 }
 
-.team__galery__foto:hover{
-  border: 0px solid #ffffff;
+.team__galery__foto.galery__hover{
+  transform: scale(1);
 }
 
 /* End Team */
@@ -926,10 +966,6 @@ a.footer__credits__text:hover{
 
   .team__item__info{
     padding: 0 5vh;
-  }
-
-  .team__galery__foto{
-    height: 110px;
   }
 
 }
@@ -1307,11 +1343,6 @@ a.footer__credits__text:hover{
     margin-bottom: 33px;
   }
 
-  .team__galery__foto{
-    height: 80px;
-    border: 8px solid #ffffff;
-  }
-
   .slickPrev{
     position: absolute;
     left: 0;
@@ -1484,10 +1515,6 @@ a.footer__credits__text:hover{
     padding: 0 10%;
   }
 
-  .team__galery__foto{
-    height: 60px;
-  }
-
 }
 
 @media(max-width: 575px){
@@ -1502,10 +1529,6 @@ a.footer__credits__text:hover{
 
   .main__text{
     font-size: 34px;
-  }
-
-  .team__galery__foto{
-    height: 40px;
   }
 
 }

@@ -50,8 +50,6 @@ $(document).ready(function () {
     heightOpts = 112;
   }
 
-  // width >= 393 && 
-
   let vsOpts = {
     $slides: $('.main__slide'),
     $list: $('.main__slides'),
@@ -71,6 +69,25 @@ $(document).ready(function () {
     })
   });
   vSlide.play();
+
+  //Код для svg стрілок
+
+  $('img.img__svg').each(function(){
+    var $img = $(this);
+    var imgClass = $img.attr('class');
+    var imgURL = $img.attr('src');
+    $.get(imgURL, function(data) {
+      var $svg = $(data).find('svg');
+      if(typeof imgClass !== 'undefined') {
+        $svg = $svg.attr('class', imgClass+' replaced-svg');
+      }
+      $svg = $svg.removeAttr('xmlns:a');
+      if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+        $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+      }
+      $img.replaceWith($svg);
+    }, 'xml');
+  });
 
   // Код для блоку послуг
 
@@ -208,6 +225,7 @@ $(document).ready(function () {
     nextArrow: '<button type="button" class="slickNext"></button>',
     focusOnSelect: true,
     swipe: true,
+    dots: true,
   });
 
   let idTeam = document.getElementsByClassName("team__item__img");
@@ -225,6 +243,20 @@ $(document).ready(function () {
         idTeam[i].src = oldFotoTeam;
       })
       $('.team__item__img').stop(true, true).animate({ opacity: 1 }, 400)
+    }
+  }
+
+  let idTeamGalery = document.getElementsByClassName("team__galery__foto");
+  let idDotsGalery = document.getElementsByClassName("slick-dots");
+  idDotsGalery = idDotsGalery[0].children;
+
+  for(let i = 0; i < idDotsGalery.length; i++){
+    console.log(idDotsGalery[i].children);
+    idDotsGalery[i].onmouseover = function (e) {
+      idTeamGalery[i].classList.add("galery__hover");
+    }
+    idDotsGalery[i].onmouseleave = function (e) {
+      idTeamGalery[i].classList.remove("galery__hover");
     }
   }
 
