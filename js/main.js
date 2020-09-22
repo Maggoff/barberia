@@ -101,28 +101,28 @@ $(document).ready(function () {
     $(id[i]).hover(function(){
       if (oldI != i) {
         oldI = i;
-        $('#services__info__img, #services__info__text').finish().animate({ opacity: 0 }, 400, function () {
+        $('#services__info__img, #services__info__text').stop(true, true).animate({ opacity: 0 }, 800, function () {
           img.src = id[i].getAttribute("data-img");
           txt.innerHTML = id[i].getAttribute("data-text");
         });
-        $('#services__info__img, #services__info__text').animate({ opacity: 1 }, 400,);
+        $('#services__info__img, #services__info__text').stop(true, true).animate({ opacity: 1 }, 800,);
       }
     });
     img.onmouseover = function (e) {
       if (oldI == 100) {
         oldI = 0;
       }
-      $('#services__info__img').finish().animate({ opacity: 0 }, 400, function () {
-        oldFoto = img.src;
+      oldFoto = img.src;
+      $('#services__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
         img.src = id[oldI].getAttribute("data-img-second");
       })
-      $('#services__info__img').animate({ opacity: 1 }, 400)
+      $('#services__info__img').stop(true, true).animate({ opacity: 1 }, 400)
     }
     img.onmouseleave = function (e) {
-      $('#services__info__img').finish().animate({ opacity: 0 }, 400, function () {
+      $('#services__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
         img.src = oldFoto
       })
-      $('#services__info__img').animate({ opacity: 1 }, 400)
+      $('#services__info__img').stop(true, true).animate({ opacity: 1 }, 400)
     }
   }
 
@@ -139,28 +139,28 @@ $(document).ready(function () {
     $(idHaircut[i]).hover(function(){
       if (oldIHaircut != i) {
         oldIHaircut = i;
-        $('#haircuts__info__img, #haircuts__info__text').finish().animate({ opacity: 0 }, 400, function () {
+        $('#haircuts__info__img, #haircuts__info__text').stop(true, true).animate({ opacity: 0 }, 800, function () {
           imgHaircut.src = idHaircut[i].getAttribute("data-img");
           txtHaircut.innerHTML = idHaircut[i].getAttribute("data-text");
         });
-        $('#haircuts__info__img, #haircuts__info__text').animate({ opacity: 1 }, 400,);
+        $('#haircuts__info__img, #haircuts__info__text').stop(true, true).animate({ opacity: 1 }, 800,);
       }
     });
     imgHaircut.onmouseover = function (e) {
       if (oldIHaircut == 100) {
         oldIHaircut = 0;
       }
-      $('#haircuts__info__img').finish().animate({ opacity: 0 }, 400, function () {
-        oldFotoHaircut = imgHaircut.src;
+      oldFotoHaircut = imgHaircut.src;
+      $('#haircuts__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
         imgHaircut.src = idHaircut[oldIHaircut].getAttribute("data-img-second");
       })
-      $('#haircuts__info__img').animate({ opacity: 1 }, 400)
+      $('#haircuts__info__img').stop(true, true).animate({ opacity: 1 }, 400)
     }
     imgHaircut.onmouseleave = function (e) {
-      $('#haircuts__info__img').finish().animate({ opacity: 0 }, 400, function () {
+      $('#haircuts__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
         imgHaircut.src = oldFotoHaircut
       })
-      $('#haircuts__info__img').animate({ opacity: 1 }, 400)
+      $('#haircuts__info__img').stop(true, true).animate({ opacity: 1 }, 400)
     }
   }
 
@@ -177,28 +177,28 @@ $(document).ready(function () {
     $(idBar[i]).hover(function(){
       if (oldIBar != i) {
         oldIBar = i;
-        $('#bar__info__img, #bar__info__text').finish().animate({ opacity: 0 }, 400, function () {
+        $('#bar__info__img, #bar__info__text').stop(true, true).animate({ opacity: 0 }, 800, function () {
           imgBar.src = idBar[i].getAttribute("data-img");
           txtBar.innerHTML = idBar[i].getAttribute("data-text");
         });
-        $('#bar__info__img, #bar__info__text').animate({ opacity: 1 }, 400,);
+        $('#bar__info__img, #bar__info__text').stop(true, true).animate({ opacity: 1 }, 800,);
       }
     });
     imgBar.onmouseover = function (e) {
       if (oldIBar == 100) {
         oldIBar = 0;
       }
-      $('#bar__info__img').finish().animate({ opacity: 0 }, 400, function () {
-        oldFotoBar = imgBar.src;
+      oldFotoBar = imgBar.src;
+      $('#bar__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
         imgBar.src = idBar[oldIBar].getAttribute("data-img-second");
       })
-      $('#bar__info__img').animate({ opacity: 1 }, 400)
+      $('#bar__info__img').stop(true, true).animate({ opacity: 1 }, 400)
     }
     imgBar.onmouseleave = function (e) {
-      $('#bar__info__img').finish().animate({ opacity: 0 }, 400, function () {
+      $('#bar__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
         imgBar.src = oldFotoBar;
       })
-      $('#bar__info__img').animate({ opacity: 1 }, 400)
+      $('#bar__info__img').stop(true, true).animate({ opacity: 1 }, 400)
     }
   }
 
@@ -232,16 +232,16 @@ $(document).ready(function () {
   for (let i = 0; i < idTeam.length; i++) {
     idTeam[i].onmouseover = function (e) {
       oldFotoTeam = idTeam[i].src;
-      $('.team__item__img').finish().animate({ opacity: 0 }, 400, function () {
+      $('.team__item__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
         idTeam[i].src = idTeam[i].getAttribute("data-img-second");
       });
-      $('.team__item__img').animate({ opacity: 1 }, 400,);
+      $('.team__item__img').stop(true, true).animate({ opacity: 1 }, 400,);
     }
     idTeam[i].onmouseleave = function (e) {
-      $('.team__item__img').finish().animate({ opacity: 0 }, 400, function () {
+      $('.team__item__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
         idTeam[i].src = oldFotoTeam;
       })
-      $('.team__item__img').animate({ opacity: 1 }, 400)
+      $('.team__item__img').stop(true, true).animate({ opacity: 1 }, 400)
     }
   }
 

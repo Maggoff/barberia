@@ -915,12 +915,18 @@ a.footer__credits__text:hover{
 
   .header{
     height: 8vh;
-    padding-top: 2vh;
+    padding-top: 2.7vh;
+    padding-bottom: 0;
     transition: 0.8s;
   }
 
   .header__max{
     height: 100vh;
+  }
+
+  .header__logo{
+    display: flex;
+    align-items: center;
   }
 
   .header__logo img{
@@ -957,13 +963,11 @@ a.footer__credits__text:hover{
   }
 
   .header__burger{
-    text-align: end;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: flex-end;
     color: #000000;
-    font-size: 24px;
-    line-height: 28px;
+    height: 100%;
     z-index: 2;
   }
 
@@ -1179,7 +1183,7 @@ a.footer__credits__text:hover{
   /* Training */
 
   .training{
-    padding-top: 80px;
+    padding-top: 130px;
     padding-bottom: 0;
   }
 
@@ -1373,6 +1377,7 @@ a.footer__credits__text:hover{
 
   .footer__logo{
     margin-top: 0;
+    width: 190px;
   }
 
   #map{
@@ -1438,10 +1443,35 @@ a.footer__credits__text:hover{
 
 }
 
-@media(max-width: 392px){
+@media(max-width: 470px){
+
+  .main__text{
+    font-size: 40px;
+  }
+
+}
+
+@media(max-width: 400px){
+
+  .main__text{
+    font-size: 38px;
+  }
+  
+}
+
+@media(max-width: 360px){
 
   .main__text{
     font-size: 34px;
+  }
+  
+}
+
+
+@media(max-width: 340px){
+
+  .main__text{
+    font-size: 30px;
   }
 
 }
