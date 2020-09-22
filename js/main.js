@@ -283,16 +283,16 @@ $(document).ready(function () {
   for (let i = 0; i < idTeam.length; i++) {
     idTeam[i].onmouseover = function (e) {
       oldFotoTeam = idTeam[i].src;
-      $('.team__item__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
+      $('.team__item__img').finish().animate({ opacity: 0 }, 200, function () {
         idTeam[i].src = idTeam[i].getAttribute("data-img-second");
       });
-      $('.team__item__img').stop(true, true).animate({ opacity: 1 }, 400,);
+      $('.team__item__img').animate({ opacity: 1 }, 200);
     }
     idTeam[i].onmouseleave = function (e) {
-      $('.team__item__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
+      $('.team__item__img').finish().animate({ opacity: 0 }, 200, function () {
         idTeam[i].src = oldFotoTeam;
       })
-      $('.team__item__img').stop(true, true).animate({ opacity: 1 }, 400)
+      $('.team__item__img').animate({ opacity: 1 }, 200)
     }
   }
 
