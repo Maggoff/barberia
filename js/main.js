@@ -71,17 +71,17 @@ $(document).ready(function () {
 
   //Код для svg стрілок
 
-  $('img.img__svg').each(function(){
+  $('img.img__svg').each(function () {
     var $img = $(this);
     var imgClass = $img.attr('class');
     var imgURL = $img.attr('src');
-    $.get(imgURL, function(data) {
+    $.get(imgURL, function (data) {
       var $svg = $(data).find('svg');
-      if(typeof imgClass !== 'undefined') {
-        $svg = $svg.attr('class', imgClass+' replaced-svg');
+      if (typeof imgClass !== 'undefined') {
+        $svg = $svg.attr('class', imgClass + ' replaced-svg');
       }
       $svg = $svg.removeAttr('xmlns:a');
-      if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+      if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
         $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
       }
       $img.replaceWith($svg);
@@ -98,31 +98,31 @@ $(document).ready(function () {
   img.src = id[0].getAttribute("data-img");
   txt.innerHTML = id[0].getAttribute("data-text");
   for (let i = 0; i < id.length; i++) {
-    $(id[i]).hover(function(){
+    $(id[i]).hover(function () {
       if (oldI != i) {
         oldI = i;
-        $('#services__info__img, #services__info__text').stop(true, true).animate({ opacity: 0 }, 800, function () {
+        $('#services__info__img, #services__info__text').finish().animate({ opacity: 0 }, 200, function () {
           img.src = id[i].getAttribute("data-img");
           txt.innerHTML = id[i].getAttribute("data-text");
         });
-        $('#services__info__img, #services__info__text').stop(true, true).animate({ opacity: 1 }, 800,);
+        $('#services__info__img, #services__info__text').animate({ opacity: 1 }, 200);
       }
     });
     img.onmouseover = function (e) {
       if (oldI == 100) {
         oldI = 0;
       }
-      oldFoto = img.src;
-      $('#services__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
+      $('#services__info__img').finish().animate({ opacity: 0 }, 200, function () {
+        oldFoto = img.src;
         img.src = id[oldI].getAttribute("data-img-second");
       })
-      $('#services__info__img').stop(true, true).animate({ opacity: 1 }, 400)
+      $('#services__info__img').animate({ opacity: 1 }, 200)
     }
     img.onmouseleave = function (e) {
-      $('#services__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
+      $('#services__info__img').finish().animate({ opacity: 0 }, 200, function () {
         img.src = oldFoto
       })
-      $('#services__info__img').stop(true, true).animate({ opacity: 1 }, 400)
+      $('#services__info__img').animate({ opacity: 1 }, 200)
     }
   }
 
@@ -136,31 +136,31 @@ $(document).ready(function () {
   imgHaircut.src = idHaircut[0].getAttribute("data-img");
   txtHaircut.innerHTML = idHaircut[0].getAttribute("data-text");
   for (let i = 0; i < idHaircut.length; i++) {
-    $(idHaircut[i]).hover(function(){
+    $(idHaircut[i]).hover(function () {
       if (oldIHaircut != i) {
         oldIHaircut = i;
-        $('#haircuts__info__img, #haircuts__info__text').stop(true, true).animate({ opacity: 0 }, 800, function () {
+        $('#haircuts__info__img, #haircuts__info__text').finish().animate({ opacity: 0 }, 200, function () {
           imgHaircut.src = idHaircut[i].getAttribute("data-img");
           txtHaircut.innerHTML = idHaircut[i].getAttribute("data-text");
         });
-        $('#haircuts__info__img, #haircuts__info__text').stop(true, true).animate({ opacity: 1 }, 800,);
+        $('#haircuts__info__img, #haircuts__info__text').animate({ opacity: 1 }, 200);
       }
     });
     imgHaircut.onmouseover = function (e) {
       if (oldIHaircut == 100) {
         oldIHaircut = 0;
       }
-      oldFotoHaircut = imgHaircut.src;
-      $('#haircuts__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
+      $('#haircuts__info__img').finish().animate({ opacity: 0 }, 200, function () {
+        oldFotoHaircut = imgHaircut.src;
         imgHaircut.src = idHaircut[oldIHaircut].getAttribute("data-img-second");
       })
-      $('#haircuts__info__img').stop(true, true).animate({ opacity: 1 }, 400)
+      $('#haircuts__info__img').animate({ opacity: 1 }, 200)
     }
     imgHaircut.onmouseleave = function (e) {
-      $('#haircuts__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
+      $('#haircuts__info__img').finish().animate({ opacity: 0 }, 200, function () {
         imgHaircut.src = oldFotoHaircut
       })
-      $('#haircuts__info__img').stop(true, true).animate({ opacity: 1 }, 400)
+      $('#haircuts__info__img').animate({ opacity: 1 }, 200)
     }
   }
 
@@ -174,31 +174,31 @@ $(document).ready(function () {
   imgBar.src = idBar[0].getAttribute("data-img");
   txtBar.innerHTML = idBar[0].getAttribute("data-text");
   for (let i = 0; i < idBar.length; i++) {
-    $(idBar[i]).hover(function(){
+    $(idBar[i]).hover(function () {
       if (oldIBar != i) {
         oldIBar = i;
-        $('#bar__info__img, #bar__info__text').stop(true, true).animate({ opacity: 0 }, 800, function () {
+        $('#bar__info__img, #bar__info__text').finish().animate({ opacity: 0 }, 200, function () {
           imgBar.src = idBar[i].getAttribute("data-img");
           txtBar.innerHTML = idBar[i].getAttribute("data-text");
         });
-        $('#bar__info__img, #bar__info__text').stop(true, true).animate({ opacity: 1 }, 800,);
+        $('#bar__info__img, #bar__info__text').animate({ opacity: 1 }, 200);
       }
     });
     imgBar.onmouseover = function (e) {
       if (oldIBar == 100) {
         oldIBar = 0;
       }
-      oldFotoBar = imgBar.src;
-      $('#bar__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
+      $('#bar__info__img').finish().animate({ opacity: 0 }, 200, function () {
+        oldFotoBar = imgBar.src;
         imgBar.src = idBar[oldIBar].getAttribute("data-img-second");
       })
-      $('#bar__info__img').stop(true, true).animate({ opacity: 1 }, 400)
+      $('#bar__info__img').animate({ opacity: 1 }, 200)
     }
     imgBar.onmouseleave = function (e) {
-      $('#bar__info__img').stop(true, true).animate({ opacity: 0 }, 400, function () {
+      $('#bar__info__img').finish().animate({ opacity: 0 }, 200, function () {
         imgBar.src = oldFotoBar;
       })
-      $('#bar__info__img').stop(true, true).animate({ opacity: 1 }, 400)
+      $('#bar__info__img').animate({ opacity: 1 }, 200)
     }
   }
 
@@ -213,6 +213,57 @@ $(document).ready(function () {
     focusOnSelect: true,
     swipe: true,
   });
+
+  let imgServicesMob = document.getElementsByClassName("servicesMob");
+  let oldFotoServicesMob = imgServicesMob[0].getAttribute("data-img-second");
+  for (let i = 0; i < imgServicesMob.length; i++) {
+    $(imgServicesMob[i]).hover(function () {
+      $(imgServicesMob[i]).finish().animate({ opacity: 0 }, 200, function () {
+        oldFotoServicesMob = imgServicesMob[i].src;
+        imgServicesMob[i].src = imgServicesMob[i].getAttribute("data-img-second");
+      })
+      $(imgServicesMob[i]).animate({ opacity: 1 }, 200)
+    }, function () {
+      $(imgServicesMob[i]).finish().animate({ opacity: 0 }, 200, function () {
+        imgServicesMob[i].src = oldFotoServicesMob;
+      })
+      $(imgServicesMob[i]).animate({ opacity: 1 }, 200)
+    });
+  }
+
+  let imgHaircutsMob = document.getElementsByClassName("haircutsMob");
+  let oldFotoHaircutsMob = imgHaircutsMob[0].getAttribute("data-img-second");
+  for (let i = 0; i < imgHaircutsMob.length; i++) {
+    $(imgHaircutsMob[i]).hover(function () {
+      $(imgHaircutsMob[i]).finish().animate({ opacity: 0 }, 200, function () {
+        oldFotoHaircutsMob = imgHaircutsMob[i].src;
+        imgHaircutsMob[i].src = imgHaircutsMob[i].getAttribute("data-img-second");
+      })
+      $(imgHaircutsMob[i]).animate({ opacity: 1 }, 200)
+    }, function () {
+      $(imgHaircutsMob[i]).finish().animate({ opacity: 0 }, 200, function () {
+        imgHaircutsMob[i].src = oldFotoHaircutsMob;
+      })
+      $(imgHaircutsMob[i]).animate({ opacity: 1 }, 200)
+    });
+  }
+
+  let imgBarMob = document.getElementsByClassName("barMob");
+  let oldFotoBarMob = imgBarMob[0].getAttribute("data-img-second");
+  for (let i = 0; i < imgBarMob.length; i++) {
+    $(imgBarMob[i]).hover(function () {
+      $(imgBarMob[i]).finish().animate({ opacity: 0 }, 200, function () {
+        oldFotoBarMob = imgBarMob[i].src;
+        imgBarMob[i].src = imgBarMob[i].getAttribute("data-img-second");
+      })
+      $(imgBarMob[i]).animate({ opacity: 1 }, 200)
+    }, function () {
+      $(imgBarMob[i]).finish().animate({ opacity: 0 }, 200, function () {
+        imgBarMob[i].src = oldFotoBarMob;
+      })
+      $(imgBarMob[i]).animate({ opacity: 1 }, 200)
+    });
+  }
 
   // Код для блоку команди
 
@@ -245,18 +296,20 @@ $(document).ready(function () {
     }
   }
 
-  let idTeamGalery = document.getElementsByClassName("team__galery__foto");
+
   let idDotsGalery = document.getElementsByClassName("slick-dots");
   let galeryHeight = document.getElementsByClassName("team__galery");
-
+  let idTeamGalery = document.getElementsByClassName("team__galery__foto");
   galeryHeight = getComputedStyle(galeryHeight[0]);
-  if(screen.width <= 991){
+
+  if (screen.width <= 991) {
+    console.log(galeryHeight.height);
     idDotsGalery[0].style.height = galeryHeight.height;
     idDotsGalery[0].style.top = '-' + galeryHeight.height;
   }
   idDotsGalery = idDotsGalery[0].children;
 
-  for(let i = 0; i < idDotsGalery.length; i++){
+  for (let i = 0; i < idDotsGalery.length; i++) {
     idDotsGalery[i].onmouseover = function (e) {
       idTeamGalery[i].classList.add("galery__hover");
     }
