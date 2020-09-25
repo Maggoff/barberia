@@ -88,6 +88,18 @@ $(document).ready(function () {
     }, 'xml');
   });
 
+  //Код для слайдера в блоку з відео
+
+  $('.callToAction__slider').slick({
+    centerMode: true,
+    centerPadding: '0px',
+    slidesToShow: 1,
+    autoplay: true,
+    arrows: false,
+    focusOnSelect: true,
+    swipe: true,
+  });
+
   // Код для блоку послуг
 
   let id = document.getElementsByClassName("services__item");
