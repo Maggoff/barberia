@@ -1027,8 +1027,11 @@ a.footer__credits__text:hover{
   .callToAction__left{
     width: 100%;
     border: 8px solid #f8f8f8;
-    padding: 6% 5%;
     align-items: initial;
+  }
+
+  .callToAction__left__item{
+    padding: 6% 5%;
   }
   
   .callToAction__left__title{
