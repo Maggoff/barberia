@@ -231,7 +231,6 @@ body{
   width: 40%;
   background-color: #ffffff;
   border: 16px solid #f8f8f8;
-  padding: 6% 5%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -240,6 +239,10 @@ body{
 
 .callToAction__slider{
   width: 100%;
+}
+
+.callToAction__left__item{
+  padding: 10% 13%;
 }
 
 .callToAction__left__title{
