@@ -277,44 +277,6 @@ $(document).ready(function () {
     });
   }
 
-  // Код для обучения
-
-  let imgEntrance = document.getElementById("training__img1");
-  let oldFotoEntrance = imgEntrance.getAttribute("data-img-second");
-  for (let i = 0; i < idBar.length; i++) {
-    imgEntrance.onmouseover = function (e) {
-      $(imgEntrance).finish().animate({ opacity: 0 }, 200, function () {
-        oldFotoEntrance = imgEntrance.src;
-        imgEntrance.src = imgEntrance.getAttribute("data-img-second");
-      })
-      $(imgEntrance).animate({ opacity: 1 }, 200)
-    }
-    imgEntrance.onmouseleave = function (e) {
-      $(imgEntrance).finish().animate({ opacity: 0 }, 200, function () {
-        imgEntrance.src = oldFotoEntrance;
-      })
-      $(imgEntrance).animate({ opacity: 1 }, 200)
-    }
-  }
-
-  let imgGrowth = document.getElementById("training__img2");
-  let oldFotoGrowth = imgGrowth.getAttribute("data-img-second");
-  for (let i = 0; i < idBar.length; i++) {
-    imgGrowth.onmouseover = function (e) {
-      $(imgGrowth).finish().animate({ opacity: 0 }, 200, function () {
-        oldFotoGrowth = imgGrowth.src;
-        imgGrowth.src = imgGrowth.getAttribute("data-img-second");
-      })
-      $(imgGrowth).animate({ opacity: 1 }, 200)
-    }
-    imgGrowth.onmouseleave = function (e) {
-      $(imgGrowth).finish().animate({ opacity: 0 }, 200, function () {
-        imgGrowth.src = oldFotoGrowth;
-      })
-      $(imgGrowth).animate({ opacity: 1 }, 200)
-    }
-  }
-
   // Код для блоку команди
 
   $('.team__slider').slick({
