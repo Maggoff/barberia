@@ -1175,13 +1175,20 @@ a.footer__credits__text:hover{
     line-height: 24px;
     font-weight: 500;
     color: #3d3d3d;
-    margin-right: 20px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
   }
 
-  .showcaseMob__item__info__box__line{
+  .showcaseMob__item__info__box__text::after{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
     height: 1px;
-    width: 100%;
-    background-color: #e4e4e4;
+    margin-left: 25px;
+    width: 1000%;
+    background-color: #000000;
   }
 
   .showcaseMob__item__info__box__price{
