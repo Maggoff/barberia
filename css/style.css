@@ -108,15 +108,14 @@ body{
   color: #000000;
   margin-left: 5%;
   transition: 0.25s;
-  padding-bottom: 5px;
   position: relative;
 }
 
 .header__menu__item::after{
   position: absolute;
   content: "";
-  bottom: 0;
-  height: 2px;
+  bottom: -6px;
+  height: 1px;
   left: 50%;
   transform: translateX(-50%);
   background: #000000;
@@ -150,14 +149,13 @@ body{
   color: #000000;
   transition: 0.25s;
   position: relative;
-  padding-bottom: 2px;
 }
 
 .header__lang::after{
   position: absolute;
   content: "";
-  bottom: 0;
-  height: 2px;
+  bottom: -6px;
+  height: 1px;
   left: 50%;
   transform: translateX(-50%);
   background: #000000;
