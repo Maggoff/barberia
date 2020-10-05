@@ -103,39 +103,25 @@ $(document).ready(function () {
   // Код для блоку послуг
 
   let id = document.getElementsByClassName("services__item");
-  let img = document.getElementById("services__info__img");
+  let imgLeft = document.getElementById("services__info__img__left");
+  let imgRight = document.getElementById("services__info__img__right");
   let txt = document.getElementById("services__info__text");
   let oldI = 100;
   let oldFoto = id[0].getAttribute("data-img-second");
-  img.src = id[0].getAttribute("data-img");
+  imgLeft.src = id[0].getAttribute("data-img");
+  imgRight.src = id[0].getAttribute("data-img-second");
   txt.innerHTML = id[0].getAttribute("data-text");
   for (let i = 0; i < id.length; i++) {
     $(id[i]).hover(function () {
       if (oldI != i) {
         oldI = i;
-        $('#services__info__img, #services__info__text').finish().animate({ opacity: 0 }, 200, function () {
-          img.src = id[i].getAttribute("data-img");
-          txt.innerHTML = id[i].getAttribute("data-text");
+        $("#services__info__img__left, #services__info__img__right").finish().animate({ opacity: 0 }, 200, function () {
+          imgLeft.src = id[i].getAttribute("data-img");
+          imgRight.src = id[i].getAttribute("data-img-second");
         });
-        $('#services__info__img, #services__info__text').animate({ opacity: 1 }, 200);
+        $("#services__info__img__left, #services__info__img__right").animate({ opacity: 1 }, 200);
       }
     });
-    img.onmouseover = function (e) {
-      if (oldI == 100) {
-        oldI = 0;
-      }
-      $('#services__info__img').finish().animate({ opacity: 0 }, 200, function () {
-        oldFoto = img.src;
-        img.src = id[oldI].getAttribute("data-img-second");
-      })
-      $('#services__info__img').animate({ opacity: 1 }, 200)
-    }
-    img.onmouseleave = function (e) {
-      $('#services__info__img').finish().animate({ opacity: 0 }, 200, function () {
-        img.src = oldFoto
-      })
-      $('#services__info__img').animate({ opacity: 1 }, 200)
-    }
   }
 
   // Код для блоку стрижок
@@ -333,7 +319,7 @@ $(document).ready(function () {
   // Код для блоку Total Look
 
   $(function () {
-    $("#totalLook__container").twentytwenty({
+    $("#totalLook__container, .showcase__info__container").twentytwenty({
       default_offset_pct: 0.5,
       orientation: 'horizontal',
       no_overlay: true,
