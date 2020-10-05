@@ -212,22 +212,22 @@ $(document).ready(function () {
     swipe: true,
   });
 
-  let imgServicesMob = document.getElementsByClassName("servicesMob");
-  let oldFotoServicesMob = imgServicesMob[0].getAttribute("data-img-second");
-  for (let i = 0; i < imgServicesMob.length; i++) {
-    $(imgServicesMob[i]).hover(function () {
-      $(imgServicesMob[i]).finish().animate({ opacity: 0 }, 200, function () {
-        oldFotoServicesMob = imgServicesMob[i].src;
-        imgServicesMob[i].src = imgServicesMob[i].getAttribute("data-img-second");
-      })
-      $(imgServicesMob[i]).animate({ opacity: 1 }, 200)
-    }, function () {
-      $(imgServicesMob[i]).finish().animate({ opacity: 0 }, 200, function () {
-        imgServicesMob[i].src = oldFotoServicesMob;
-      })
-      $(imgServicesMob[i]).animate({ opacity: 1 }, 200)
-    });
-  }
+  // let imgServicesMob = document.getElementsByClassName("servicesMob");
+  // let oldFotoServicesMob = imgServicesMob[0].getAttribute("data-img-second");
+  // for (let i = 0; i < imgServicesMob.length; i++) {
+  //   $(imgServicesMob[i]).hover(function () {
+  //     $(imgServicesMob[i]).finish().animate({ opacity: 0 }, 200, function () {
+  //       oldFotoServicesMob = imgServicesMob[i].src;
+  //       imgServicesMob[i].src = imgServicesMob[i].getAttribute("data-img-second");
+  //     })
+  //     $(imgServicesMob[i]).animate({ opacity: 1 }, 200)
+  //   }, function () {
+  //     $(imgServicesMob[i]).finish().animate({ opacity: 0 }, 200, function () {
+  //       imgServicesMob[i].src = oldFotoServicesMob;
+  //     })
+  //     $(imgServicesMob[i]).animate({ opacity: 1 }, 200)
+  //   });
+  // }
 
   let imgHaircutsMob = document.getElementsByClassName("haircutsMob");
   let oldFotoHaircutsMob = imgHaircutsMob[0].getAttribute("data-img-second");
