@@ -107,14 +107,17 @@ $(document).ready(function () {
   let imgRight = document.getElementById("services__info__img__right");
   let txt = document.getElementById("services__info__text");
   let oldI = 100;
-  let oldFoto = id[0].getAttribute("data-img-second");
   imgLeft.src = id[0].getAttribute("data-img");
   imgRight.src = id[0].getAttribute("data-img-second");
   txt.innerHTML = id[0].getAttribute("data-text");
   for (let i = 0; i < id.length; i++) {
     $(id[i]).hover(function () {
       if (oldI != i) {
+        if (oldI != 100) {
+          id[oldI].classList.remove('active');
+        }
         oldI = i;
+        id[i].classList.add('active');
         $("#services__info__img__left, #services__info__img__right").finish().animate({ opacity: 0 }, 200, function () {
           imgLeft.src = id[i].getAttribute("data-img");
           imgRight.src = id[i].getAttribute("data-img-second");
@@ -209,7 +212,7 @@ $(document).ready(function () {
     prevArrow: '<button type="button" class="slickPrevMob"></button>',
     nextArrow: '<button type="button" class="slickNextMob"></button>',
     focusOnSelect: true,
-    swipe: true,
+    swipe: false,
   });
 
   // let imgServicesMob = document.getElementsByClassName("servicesMob");
@@ -300,11 +303,9 @@ $(document).ready(function () {
   let idTeamGalery = document.getElementsByClassName("team__galery__foto");
   galeryHeight = getComputedStyle(galeryHeight[0]);
 
-  if (screen.width <= 991) {
-    console.log(galeryHeight.height);
-    idDotsGalery[0].style.height = galeryHeight.height;
-    idDotsGalery[0].style.top = '-' + galeryHeight.height;
-  }
+  console.log(galeryHeight.height);
+  idDotsGalery[0].style.height = galeryHeight.height;
+  idDotsGalery[0].style.top = '-' + galeryHeight.height;
   idDotsGalery = idDotsGalery[0].children;
 
   for (let i = 0; i < idDotsGalery.length; i++) {

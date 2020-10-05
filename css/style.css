@@ -389,7 +389,7 @@ body{
 
 .showcase__menu__item{
   display: flex;
-  align-items: center;
+  flex-direction: column;
   width: 100%;
   margin-bottom: 16px;
   font-family: 'Gilroy', sans-serif;
@@ -403,6 +403,11 @@ body{
   margin-bottom: 0px;
 }
 
+.showcase__menu__container{
+  display: flex;
+  align-items: center;
+}
+
 .showcase__menu__box{
   display: flex;
   align-items: center;
@@ -410,7 +415,7 @@ body{
   overflow: hidden;
 }
 
-.showcase__menu__item:hover{
+.showcase__menu__item.active{
   cursor: pointer;
 	color: #000000;
 }
@@ -431,7 +436,7 @@ body{
   transition: 0.4s;
 }
 
-.showcase__menu__item:hover .showcase__menu__text::after{
+.showcase__menu__item.active .showcase__menu__text::after{
 	background-color: #1c1c1c;
 }
 
@@ -448,10 +453,25 @@ body{
 	transition: 0.4s;
 }
 
-.showcase__menu__item:hover .showcase__menu__line{
+.showcase__menu__item.active .showcase__menu__line{
   width: 1vw;
 	background-color: #1c1c1c;
 	margin-right: 1vw;
+}
+
+.showcase__menu__desc{
+  margin-left: 2vw;
+  margin-top: 0px;
+  height: 0px;
+  color: transparent;
+  transition: 0.4s;
+}
+
+.showcase__menu__item.active .showcase__menu__desc{
+  margin-top: 10px;
+  height: auto;
+  color: #878787;
+  transition: 0.4s;
 }
 
 /* Services, Haircuts, Bar */
@@ -485,6 +505,19 @@ body{
 
 .training__img{
   width: 100%;
+  transition: 0.4s;
+}
+
+.training__img:hover{
+  opacity: 0;
+}
+
+.training__img__second{
+  width: 100%;
+  padding: 0 32px;
+  position: absolute;
+  z-index: 0;
+  left: 0;
 }
 
 /* Training, Total Look */
@@ -563,7 +596,7 @@ body{
 
 .slickPrev{
   position: absolute;
-  left: -10.2%;
+  left: -10.6%;
   top: 0;
   border: 16px solid #f8f8f8;
   background-color: #ffffff;
@@ -571,19 +604,19 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   height: 100%;
-  width: 10.2%;
+  width: 10.7%;
 }
 
 .slickNext{
   position: absolute;
-  right: -10.2%;
+  right: -10.7%;
   border: 16px solid #f8f8f8;
   background-color: #ffffff;
   background-image: url(../img/next.svg);
   background-repeat: no-repeat;
   background-position: center;
   height: 100%;
-  width: 10.2%;
+  width: 10.7%;
 }
 
 .slick-dots{
