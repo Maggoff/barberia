@@ -4,6 +4,7 @@ function initMap() {
 		document.getElementById('map'), {
 		zoom: 15,
 		scrollwheel: false,
+		disableDefaultUI: true,
 		center: uluru,
 		styles: [
 			{

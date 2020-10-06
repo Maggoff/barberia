@@ -326,8 +326,13 @@ body{
 
 /* Services, Haircuts, Bar */
 
+#haircuts{
+  background-color: #ffffff;
+}
+
 .showcase{
-  padding-top: 120px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .showcaseMob{
@@ -477,7 +482,7 @@ body{
 /* Training */
 
 .training{
-  padding-top: 120px;
+  padding-top: 60px;
   padding-bottom: 35px;
 }
 
@@ -557,6 +562,46 @@ body{
 .training__item__btn:hover .img__svg path,
 .totalLook__item__btn:hover .img__svg path{
   fill: #000000;
+}
+
+.modal-dialog{
+  max-width: none;
+  width: 80vw;
+}
+
+.modal-content{
+  border-radius: 0;
+  padding-bottom: 30px;
+}
+
+.modal-title{
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.modal__list{
+  list-style: none;
+  font-family: 'Gilroy', sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.modal__list li{
+  margin: 10px 0;
+}
+
+.modal__list li:first-of-type{
+  font-family: 'Roboto Slab', serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #000000;
 }
 
 /* End Training */
@@ -791,6 +836,16 @@ body{
 #map{
   height: 300px;
   width: 100%;
+}
+
+a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display: none;
+}
+.gmnoprint div {
+    background: none !important;
 }
 
 .container-fluid.footer{

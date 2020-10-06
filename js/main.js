@@ -20,7 +20,7 @@ $(document).ready(function () {
     let btnStyle = getComputedStyle(btn);
     event.preventDefault();
     let id = $(this).attr('href'),
-      top = $(id).offset().top;
+      top = $(id).offset().top - 60;
 
     if (btnStyle.display === "none") {
       $('body,html').animate({ scrollTop: top }, 600);
