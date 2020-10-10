@@ -336,6 +336,21 @@ $(document).ready(function () {
     focusOnSelect: true,
     swipe: true,
     infinite: false,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+          adaptiveWidth: true,
+        }
+      }
+    ]
   });
 
 });

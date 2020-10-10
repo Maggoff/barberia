@@ -912,6 +912,24 @@ body{
   right: 45%;
 }
 
+@media (max-width: 1200px) {
+
+  .slickPrevReview {
+    left: 40%;
+  }
+  
+  .slickNextReview {
+    right: 40%;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .modal-dialog {
+    width: auto;
+  }
+}
+
 /* End Total Look */
 
 /* Footer */
